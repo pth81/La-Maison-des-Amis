@@ -35,35 +35,29 @@
     ================================================== -->
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/nav.html"); ?>
 
-    <div class="container about">    
-
-		<div class="row">
-			<div class="span6">
-				<h2 class="featurette-heading">About <span class="muted">us</span></h2>
-				<p>We are Paul, Nadia, Samuel, Lochlann, Darrach and Thomas, &#8220;une famille recomposée&#8221;.</p>
-				<p>We have traveled extensively throughout the world and have setup La Maison des Amis to cater primarily for families, with all the comforts of home.</p>
-				<p>Paul has worked in the software industry since 1986, and is a founder at <a href="http://structure101.com" title="structure101.com">Structure101</a>.</p>
-				<p>Nadia previously worked as a tour guide in South America and now teaches Spanish at the lycée in Gaillac.</p>
-				<p>Samuel, Lochlann, Darrach and Thomas are all at collège.  When they can drag themselves away from the PlayStation, they play drums, handball, football and tennis.</p>
-				<p>When we are not taxi-ing the boys around, we are happy to do what&#8217;s necessary to make your stay more comfortable.</p>
+    <div class="container guest-book">    
+	    <h2 class="featurette-heading">Guest <span class="muted">book</span></h2>
+	    
+        <div class="row">
+        	<div class="span6">
+		        <div class="quote-box">
+		            <span class="quote-left"></span>
+			            <q>What a great place, great holiday!<span class="quote-right"></span></q>
+				</div>
+				<span class="quote-arrow"></span>
+				<cite><span class="photo Joe"></span><span class="author">John Joe</span>, Ballydehob</cite>
 			</div>
-			<div class="span6">
-				<img src="/images/paul-and-nadia.jpg">
-			</div>
+			
+          	<div class="span6">
+	            <div class="quote-box">
+	              <span class="quote-left"></span>
+	              <q>Wouldn’t go near the place again.<span class="quote-right"></span></q>
+	            </div>
+	            <span class="quote-arrow"></span>
+	            <cite><span class="photo Joe"></span><span class="author">Joe McCarthy</span>, Somewhere in Dublin</cite>
+	          </div>
 		</div>
-		<div class="row">
-			<div class="span6">	
-				<img src="/images/boys-in-gallicia.jpg">
-			</div>
-			<div class="span6">				  
-				<h2 class="featurette-heading">Contact <span class="muted">us</span></h2>
-				<p class="lead"><i class="fa fa-mobile"></i> +33 6 13 33 65 33 (Nadia)</p>
-				<p class="lead"><i class="fa fa-mobile"></i> +33 6 18 51 23 85 (Paul)</p>
-				<p class="lead"><i class="fa fa-phone"></i> +33 5 63 41 87 32</p>
-				<p class="lead"><i class="fa fa-envelope"></i> <a href="mailto:info@darrach.net">info@darrach.net</a></p>
-			</div>
-		</div>
-				
+		
 		<!-- FOOTER -->
 		<footer>
 		<hr/>

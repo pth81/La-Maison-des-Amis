@@ -65,14 +65,16 @@
 
     /* Carousel base class */
 	.carousel {
+	/*
 	  min-width: 1024px;
-	  max-width: 1024px;
+	  max-width: 1024px; 
 	display: block;
-	margin: 0 auto;
+	margin: 0 auto;*/
+	margin-bottom: 50px;
+	
 	}
 
     .carousel .container {
-    	margin-bottom: 100px;
     
                 height:  768px;
     
@@ -89,16 +91,25 @@
       border: 0;
       z-index: 10;
     }
+    
+    
 
     .carousel img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%
+    /*
     position:absolute;
     left:0;
     right:0;
     top: 71px;
     margin-left:auto;
-    margin-right:auto;
+    margin-right:auto;*/
       
     }
+    .carousel .container .fixed-width img { min-width:none; }
+    
     .carousel-caption {
       background-color: transparent;
       position: static;
@@ -111,7 +122,7 @@
        background-color: transparent;
        position: static;
        max-width: 550px;
-       padding: 0 240px;
+       padding: 0 140px;
        margin-top: 180px;
      }
          
@@ -139,12 +150,71 @@
 	  color: white;
 	  font-size: 30px;
 	}
+	/* GUEST BOOK CONTENT
+	-------------------------------------------------- */
+	.guest-book {
+		margin-top: 100px;
+	}
+	.quote-box {
+	    border: 1px solid #e6e6e6;
+	    padding: 30px;
+	    border-radius: 2px
+	}
+	
+	.quote-box q {
+	    display: block;
+	    font-size: 19px;
+	    line-height: 30px;
+	    margin: 0 0 0 30px
+	}
+	
+	.quote-box .quote-left {
+	    position: absolute;
+	    margin: -12px 0 0 -10px;
+	    background: url(//cdn.shopify.com/assets/images/long-landing/sprite.png?1387912210) -316px -147px no-repeat;
+	    width: 33px;
+	    height: 28px
+	}
+	
+	.quote-box .quote-right {
+	    position: absolute;
+	    margin: 4px -10px 0 10px;
+	    background: url(//cdn.shopify.com/assets/images/long-landing/sprite.png?1387912210) -353px -147px no-repeat;
+	    width: 33px;
+	    height: 28px
+	}
+	
+	.quote-arrow {
+	    display: block;
+	    margin: -1px 0 0 5px;
+	    background: url(//cdn.shopify.com/assets/images/long-landing/sprite.png?1387912210) -480px -120px no-repeat;
+	    width: 99px;
+	    height: 13px
+	}
 	
 	/* ABOUT CONTENT
 	-------------------------------------------------- */
 	.about {
 		margin-top: 100px;
 		/*padding-left: 170px;*/
+	}
+	.about img {
+		padding: 10px;
+	}
+	/* Links CONTENT
+	-------------------------------------------------- */
+	.links {
+		margin-top: 100px;
+		/*padding-left: 170px;*/
+	}
+	.link-box {
+	    border: 1px solid #e6e6e6;
+	    padding: 30px;
+	    border-radius: 2px;
+	    text-align: center;
+	}
+	.link-box .title {
+	    font-weight: bold;
 	}
 
     /* MARKETING CONTENT
@@ -192,11 +262,102 @@
       line-height: 1;
       letter-spacing: -1px;
     }
+    .about .featurette {
+      padding-top: 20px; /* Vertically center images part 1: add padding above and below text. */
+    }
+    .about .featurette-text {
+    align-content: top;
+    max-width: 50%;
+    }
+    .about .featurette-image {
+      margin-top: 0px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+    }
+    
+
+	.facebook {
+	    display: block;
+		margin-left:auto;
+		margin-right:auto;
+		padding-left: 20px;
+		width: 100px;
+		height: 50px;
+	}
+	
+	.about .featurette-image {
+	  width: 50%; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+	}
 
 
 
     /* RESPONSIVE CSS
     -------------------------------------------------- */
+    @media (min-width: 2200px) {
+        .carousel .container {
+    	  height: 1100px;
+        }
+        .carousel img {
+          height: 1100px;
+        }
+    }
+    
+    @media (max-width: 2200px) {
+        .carousel .container {
+    	  height: 1100px;
+        }
+        .carousel img {
+          height: 1100px;
+        }
+    }
+    
+    @media (max-width: 2000px) {
+        .carousel .container {
+    	  height: 900px;
+        }
+        .carousel img {
+          height: 900px;
+        }
+    }
+    
+    @media (max-width: 1600px) {
+	    .carousel .container {
+		  height: 700px;
+	    }
+	    .carousel img {
+	      height: 700px;
+	    }
+	    .carousel-caption {
+	      width: 65%;
+	      padding: 0 70px;
+	      margin-top: 125px;
+	    }
+    }
+    
+    @media (max-width: 1200px) {
+	    .carousel .container {
+	      height: 600px;
+	    }
+	    .carousel img {
+	      height: 600px;
+	    }
+	    .carousel {
+          /* Useful for responsive debugging */
+	      border: 5px solid green; 
+	    }
+	    .carousel img {
+	    /*
+	    	min-width: 940px;
+	    	max-width: 940px;*/
+	    }
+	    .carousel-caption {
+	      width: 65%;
+	      padding: 0 70px;
+	      margin-top: 100px;
+	    }
+	    .featurette {
+          /* Useful for responsive debugging 
+		  border: 5px solid green;*/
+	    }
+    }
 
     @media (max-width: 979px) {
 
@@ -209,23 +370,40 @@
         margin: -20px 0;
       }
 
-      .carousel .item {
+      .carousel {
+      /* Useful for responsive debugging 
+		border: 5px solid pink; */
+	  }
+
+	  .carousel .container {
+		 height: 500px;
+	  }
+      
+      .carousel img {
+      /*
+		min-width: 725px;
+		max-width: 725px;*/
         height: 500px;
       }
-      .carousel img {
-        width: auto;
-        height: 500px;
+      .carousel-caption {
+        padding: 0 70px;
+        margin-top: 95px;
       }
 
       .featurette {
+        /* Useful for responsive debugging 
+  		border: 5px solid pink; */
         height: auto;
         padding: 0;
+        text-align: center;
+        
       }
+      .featurette-text,
       .featurette-image.pull-left,
       .featurette-image.pull-right {
         display: block;
         float: none;
-        max-width: 40%;
+        max-width: 80%;
         margin: 0 auto 20px;
       }
     }
@@ -238,22 +416,20 @@
       }
 
       .carousel {
-        margin-left: -80px;
-        margin-right: -20px;
+      /* Useful for responsive debugging 
+  		border: 5px solid red; */
       }
       .carousel .container {
+       height: 380px;
+      }
 
-      }
-      .carousel .item {      
-        height: 300px;
-      }
       .carousel img {
-        height: 300px;
+       height: 380px;
       }
       .carousel-caption {
         width: 65%;
         padding: 0 70px;
-        margin-top: 100px;
+        margin-top: 75px;
       }
       .carousel-caption h1 {
         font-size: 30px;
@@ -266,13 +442,28 @@
       .marketing .span4 + .span4 {
         margin-top: 40px;
       }
+      
+      .featurette {
+        /* Useful for responsive debugging 
+    	border: 5px solid green; */
 
+      }
+      .featurette-text {
+        max-width: 100%;
+      }
+      
       .featurette-heading {
         font-size: 30px;
       }
       .featurette .lead {
         font-size: 18px;
         line-height: 1.5;
+      }
+      .featurette-text.pull-left,
+      .featurette-text.pull-right,
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        width: 100%;
       }
 
     }

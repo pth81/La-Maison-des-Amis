@@ -35,35 +35,39 @@
     ================================================== -->
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/nav.html"); ?>
 
-    <div class="container about">    
+    <div class="container links">    
+		<h2 class="featurette-heading">Useful <span class="muted">links</span></h2>
+		<div class="row">
+			<div class="span3">
+				<div class="link-box">
+					<a href="http://www.tourisme-tarn.com/en"><img src="/images/tourism-tarn.jpg"></a>
+					<p class="title">Tarn Tourism</p>
+					<p>The first place to look for more information on what to do and see in the region, including where to eat and what's on.</p>
+				</div>
+			</div>
+			<div class="span3">
+				<div class="link-box">
+					<a href="http://www.jardinsdesmartels.com"><img src="/images/les-jardins.jpg"></a>
+					<p class="title">Les Jardins des Martels</p>
+					<p>Literally across the road, the second most visited paying tourist site in the Tarn. Stunning!</p>
+				</div>
+			</div>
+			<div class="span3">
+				<div class="link-box">
+					<a href="http://www.vert-marine.com/cap-decouverte-le-garric-81"><img src="/images/capdecouverte.jpg"></a>
+					<p class="title">Link name</p>
+					<p>For the wee ones, take the train that runs past the end of the garden. Was previously...</p>
+				</div>
+			</div>
+			<div class="span3">
+				<div class="link-box">
+					<a href="http://www.vert-marine.com/cap-decouverte-le-garric-81"><img src="/images/capdecouverte.jpg"></a>
+					<p class="title">Cap de Couverte</p>
+					<p>Another wonderful transformation of an old mining relic.</p>
+				</div>
+			</div>
+		  </div>
 
-		<div class="row">
-			<div class="span6">
-				<h2 class="featurette-heading">About <span class="muted">us</span></h2>
-				<p>We are Paul, Nadia, Samuel, Lochlann, Darrach and Thomas, &#8220;une famille recomposée&#8221;.</p>
-				<p>We have traveled extensively throughout the world and have setup La Maison des Amis to cater primarily for families, with all the comforts of home.</p>
-				<p>Paul has worked in the software industry since 1986, and is a founder at <a href="http://structure101.com" title="structure101.com">Structure101</a>.</p>
-				<p>Nadia previously worked as a tour guide in South America and now teaches Spanish at the lycée in Gaillac.</p>
-				<p>Samuel, Lochlann, Darrach and Thomas are all at collège.  When they can drag themselves away from the PlayStation, they play drums, handball, football and tennis.</p>
-				<p>When we are not taxi-ing the boys around, we are happy to do what&#8217;s necessary to make your stay more comfortable.</p>
-			</div>
-			<div class="span6">
-				<img src="/images/paul-and-nadia.jpg">
-			</div>
-		</div>
-		<div class="row">
-			<div class="span6">	
-				<img src="/images/boys-in-gallicia.jpg">
-			</div>
-			<div class="span6">				  
-				<h2 class="featurette-heading">Contact <span class="muted">us</span></h2>
-				<p class="lead"><i class="fa fa-mobile"></i> +33 6 13 33 65 33 (Nadia)</p>
-				<p class="lead"><i class="fa fa-mobile"></i> +33 6 18 51 23 85 (Paul)</p>
-				<p class="lead"><i class="fa fa-phone"></i> +33 5 63 41 87 32</p>
-				<p class="lead"><i class="fa fa-envelope"></i> <a href="mailto:info@darrach.net">info@darrach.net</a></p>
-			</div>
-		</div>
-				
 		<!-- FOOTER -->
 		<footer>
 		<hr/>

@@ -41,16 +41,16 @@
     <div id="myCarousel" class="carousel slide">
       <div class="carousel-inner">
         <div class="item active">
-          <img src="/images/main-slider/image01.jpg" alt="">
+          <img src="/images/main-slider/image01x1170.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>In the Heart of the Tarn</h1>
-              <p class="lead">Beautifully converted large 4-bedroom barn on 5 acres. Comfortably sleeps 10.</p>
+              <p class="lead">Beautifully converted large 4-bedroom barn on 5 acres. Comfortably sleeps 10+.</p>
             </div>
           </div>
         </div>
         <div class="item">
-          <img src="/images/main-slider/image02.jpg" alt="">
+          <img src="/images/main-slider/image02x1170.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Relax at the pool</h1>
@@ -59,7 +59,7 @@
           </div>
         </div>
         <div class="item">
-          <img src="/images/main-slider/image03.jpg" alt="">
+          <img src="/images/main-slider/image03x1170.jpg" alt="">
           <div class="container">
             <div class="carousel-caption">
               <h1>Hang out</h1>
@@ -68,7 +68,7 @@
           </div>
         </div>
       <div class="item">
-        <img src="/images/main-slider/image04.jpg" alt="">
+        <img src="/images/main-slider/image04x1170.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
             <h1>With great food</h1>
@@ -78,7 +78,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="/images/main-slider/image05.jpg" alt="">
+        <img src="/images/main-slider/image05x1170.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
             <h1>In comfortable rooms</h1>
@@ -87,7 +87,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="/images/main-slider/image06.jpg" alt="">
+        <img src="/images/main-slider/image06x1170.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
 	        <h1>Dine Al Fresco</h1>
@@ -97,7 +97,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="/images/main-slider/image07.jpg" alt="">
+        <img class="fixed-width" width="576" src="/images/main-slider/image07.jpg" alt="">
         <div class="container">
           <div class="carousel-center-caption">
 	        <h1>Wander in the garden</h1>
@@ -106,17 +106,17 @@
         </div>
       </div>
       <div class="item">
-        <img src="/images/main-slider/image08.jpg" alt="">
+        <img src="/images/main-slider/image08x1170.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
-            <h1>Or better still - our neighbour’s</h1>
+            <h1>Or better still - our neighbour’s garden</h1>
             <p class="lead"></p>
             <a class="btn btn-large btn-primary" href="http://www.jardinsdesmartels.com">Learn more</a>
           </div>
         </div>
       </div>
       <div class="item">
-        <img src="/images/main-slider/image09.jpg" alt="">
+        <img src="/images/main-slider/image09x1170.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
             <h1>Explore the countryside</h1>
@@ -125,7 +125,7 @@
         </div>
       </div>
     <div class="item">
-        <img src="/images/main-slider/image1.jpg" alt="">
+        <img src="/images/main-slider/image1x1170.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
             <h1>Jump around</h1>
@@ -134,7 +134,7 @@
         </div>
     </div>
     <div class="item">
-        <img src="/images/main-slider/image11.jpg" alt="">
+        <img src="/images/main-slider/image11x1170.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
             <h1>Swing a bat</h1>
@@ -143,7 +143,7 @@
         </div>
       </div>
     <div class="item">
-        <img src="/images/main-slider/image1.jpg" alt="">
+        <img src="/images/main-slider/image1x1170.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
             <h1>Swing a racket</h1>
@@ -152,7 +152,7 @@
         </div>
       </div>
     <div class="item">
-        <img src="/images/main-slider/image13.jpg" alt="">
+        <img src="/images/main-slider/image13x1170.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
             <h1>Amuse the kids</h1>
@@ -162,7 +162,7 @@
         </div>
     </div>
     <div class="item">
-        <img src="/images/main-slider/image14.jpg" alt="">
+        <img src="/images/main-slider/image14x1170.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
             <h1>Go wild in the trees</h1>
@@ -172,7 +172,7 @@
         </div>
       </div>
     <div class="item">
-        <img src="/images/main-slider/image15.jpg" alt="">
+        <img src="/images/main-slider/image15x1170.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
             <h1>Take in the rivers</h1>
@@ -185,14 +185,14 @@
         <img src="/images/main-slider/image16.jpg" alt="">
         <div class="container">
           <div class="carousel-caption">
-            <h1>And the local markets</h1>
+            <h1>Visit the local markets</h1>
             <p class="lead"></p>
             <a class="btn btn-large btn-primary" href="#">Browse gallery</a>
           </div>
         </div>
       </div>
 	<div class="item">
-	    <img src="/images/main-slider/image17.jpg" alt="">
+	    <img src="/images/main-slider/image17x1170.jpg" alt="">
 	    <div class="container">
 	      <div class="carousel-caption">
 	        <h1>Relax at the spa</h1>
@@ -202,7 +202,7 @@
 	    </div>
 	</div>
 	<div class="item">
-	    <img src="/images/main-slider/image18.jpg" alt="">
+	    <img src="/images/main-slider/image18x1170.jpg" alt="">
 	    <div class="container">
 	      <div class="carousel-caption">
 		    <h1>See the stars</h1>
@@ -221,7 +221,7 @@
 	    </div>
 	  </div>
 	<div class="item">
-	    <img src="/images/main-slider/image19.jpg" alt="">
+	    <img src="/images/main-slider/image19x1170.jpg" alt="">
 	    <div class="container">
 	      <div class="carousel-caption">
 	        <h1>Visit the largest brick building in the world</h1>
@@ -231,17 +231,17 @@
 	    </div>
 	</div>
 	<div class="item">
-	    <img src="/images/main-slider/image20.jpg" alt="">
+	    <img src="/images/main-slider/image20x1170.jpg" alt="">
 	    <div class="container">
 	      <div class="carousel-caption">
-	        <h1>And the A380 factory</h1>
+	        <h1>The A380 factory</h1>
 	        <p class="lead"></p>
 	        <a class="btn btn-large btn-primary" href="http://manatour.fr">Learn more</a>
 	      </div>
 	    </div>
 	  </div>
 	<div class="item">
-	    <img src="/images/main-slider/image21.jpg" alt="">
+	    <img src="/images/main-slider/image21x1170.jpg" alt="">
 	    <div class="container">
 	      <div class="carousel-caption">
 	        <h1>and the vineyards of Gaillac</h1>
@@ -251,7 +251,7 @@
 	    </div>
 	  </div>
 	<div class="item">
-	    <img src="/images/main-slider/image22.jpg" alt="">
+	    <img src="/images/main-slider/image22x1170.jpg" alt="">
 	    <div class="container">
 	      <div class="carousel-caption">
 	        <h1>Even take a train</h1>
@@ -261,7 +261,7 @@
 	    </div>
     </div>
 	<div class="item">
-	    <img src="/images/main-slider/image23.jpg" alt="">
+	    <img src="/images/main-slider/image23x1170.jpg" alt="">
 	    <div class="container">
 	      <div class="carousel-caption">
 	        <h1>Or just go for a ride</h1>
@@ -270,16 +270,16 @@
 	    </div>
 	  </div>
 	<div class="item">
-	    <img src="/images/main-slider/image24.jpg" alt="">
+	    <img src="/images/main-slider/image24x1170.jpg" alt="">
 	    <div class="container">
 	      <div class="carousel-caption">
-	        <h1>And enjoy just some of the local wildlife</h1>
+	        <h1>Enjoy the local wildlife</h1>
 	        <p class="lead"></p>
 	      </div>
 	    </div>
 	</div>
 	<div class="item">
-	    <img src="/images/main-slider/image25.jpg" alt="">
+	    <img width="683" src="/images/main-slider/image25.jpg" alt="">
 	    <div class="container">
 	      <div class="carousel-center-caption">
 	        <h1>Or there is always a game at...<br/>
@@ -305,15 +305,18 @@
         <div class="span4">
           <img class="img-circle" height="140" width="140" src="/images/albi-med.jpg" >
           <h2>Rates</h2>
-          <p>Our four-bedroom house comfortably accommodates 10 people, with prices starting at €350 for a weekend in winter, up to €1750 for a week in August. Outside of peak season we like to be flexible and happy to take into account the number of people.</p>
+          <p>Our large four-bedroom house comfortably accommodates 10+ people, with prices starting at €350 for a weekend in winter, up to €1750 for a week in August.</p><p>Outside of peak season we can be flexible, taking into account the number of people and length of stay.</p>
           <p><a class="btn" href="/rates">More &raquo;</a></p>
         </div><!-- /.span4 -->
         <div class="span4">
           <img class="img-circle" height="140" width="140" src="/images/bella.jpg" >
           <h2>Guest book</h2>
-          <p>A most comfortable and well-equipped house. We had a wonderful week here and liked the local area a lot. Thanks for a great time.</p>
+          <p>A most comfortable and well-equipped house. We had a wonderful week here and liked the local area a lot.</p><p>Thanks for a great time.</p>
           <p><strong>Nick and Jo and family, England. </strong></p>
           <p><a class="btn" href="/guest-book">More &raquo;</a></p>
+          <div class="facebook">
+              <iframe src="http://www.facebook.com/plugins/like.php?href=https://www.facebook.com/maisondesamis&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:80px;" allowTransparency="true"></iframe>
+          </div>
         </div><!-- /.span4 -->
         <div class="span4">
           <img class="img-circle" height="80" width="140" src="/images/les-martels.jpg" >
@@ -330,7 +333,7 @@ We have lived in a number of different countries and have traveled extensively t
       <hr class="featurette-divider">
 
       <div class="featurette">
-        	<iframe class="pull-right" width="45%" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?msid=205657444661796595829.00000112c86472405196e&msa=0&ll=46.422713,2.515869&spn=9.437312,15.05127&output=embed"></iframe>
+        	<iframe class="featurette-image pull-right" width="45%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps/ms?msid=205657444661796595829.00000112c86472405196e&msa=0&ll=46.422713,2.515869&spn=9.437312,15.05127&output=embed"></iframe>
         <h2 class="featurette-heading">Location <span class="muted">close to perfect</span></h2>
         <p class="lead">La Maison des Amis is situated right in the heart of the Tarn, one of France's hidden treasures, and served by the airports of Toulouse (30 mins), Carcassonne (75 mins) and Rodez (90 mins).</p>
         <p class="lead"><i class="fa fa-home"></i> Les Martels, Giroussens, 81500, France</p>
@@ -339,7 +342,7 @@ We have lived in a number of different countries and have traveled extensively t
       <hr class="featurette-divider">
 
       <div class="featurette">
-        <img class="featurette-image pull-left" src="/images/paul-and-nadia.jpg">
+        <img class="featurette-image pull-left" width="" src="/images/paul-and-nadia.jpg">
         <h2 class="featurette-heading">Contact <span class="muted">us</span></h2>
         <p class="lead"><i class="fa fa-mobile"></i> +33 6 13 33 65 33 (Nadia)</p>
         <p class="lead"><i class="fa fa-mobile"></i> +33 6 18 51 23 85 (Paul)</p>
