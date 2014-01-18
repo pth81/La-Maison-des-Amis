@@ -30,6 +30,9 @@
 
     }
 
+	.nav-flags {
+	  margin-top: 12px;
+	}
     /* Remove border and change up box shadow for more contrast */
     .navbar .navbar-inner {
       margin: 0 auto;
@@ -334,20 +337,25 @@
     
     @media (max-width: 1200px) {
 	    .carousel .container {
-	      height: 600px;
+	      height: auto;
+overflow: hidden;
+    clear:both;
+
+	    
 	    }
 	    .carousel img {
-	      height: 600px;
+	     display: block;
+	    
 	    }
 	    .carousel {
           /* Useful for responsive debugging */
 	      border: 5px solid green; 
+	      	      height: auto;
+	      	      overflow: hidden;
+	      	      
+	      
 	    }
-	    .carousel img {
-	    /*
-	    	min-width: 940px;
-	    	max-width: 940px;*/
-	    }
+
 	    .carousel-caption {
 	      width: 65%;
 	      padding: 0 70px;
