@@ -1,0 +1,24 @@
+Redirect 301 /photos/ /about/photos.php
+Redirect 301 /photos /about/photos.php
+Redirect 301 /about/photos/ /about/photos.php
+Redirect 301 /about/photos /about/photos.php
+
+Redirect 301 /restaurants/ /about/restaurants.php
+Redirect 301 /restaurants /about/restaurants.php
+Redirect 301 /about/restaurants/ /about/restaurants.php
+Redirect 301 /about/restaurants /about/restaurants.php
+
+Redirect 301 /towns/ /about/towns.php
+Redirect 301 /towns /about/towns.php
+Redirect 301 /about/towns/ /about/towns.php
+Redirect 301 /about/towns /about/towns.php
+
+Redirect 301 /availability/ /about/availability.php
+Redirect 301 /availability /about/availability.php
+Redirect 301 /about/availability/ /about/availability.php
+Redirect 301 /about/availability /about/availability.php
+
+Redirect 301 /markets/ /about/markets.php
+Redirect 301 /markets /about/markets.php
+Redirect 301 /about/markets/ /about/markets.php
+Redirect 301 /about/markets /about/markets.php
