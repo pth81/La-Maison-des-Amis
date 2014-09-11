@@ -84,7 +84,7 @@
     			z-index: 10;
     		}
     		.carousel img.portrait {
-    			width: 65%;
+    			width: 50%;
 				left:0;
 				right:0;
 				margin-left:auto;
@@ -118,7 +118,7 @@
     			background-color: transparent;
     			position: static;
     			max-width: 550px;
-    			padding: 0 140px;
+    			padding: 0 240px;
     			margin-top: 180px;
     		}
     		.carousel-caption h1, .carousel-caption .lead, .carousel-center-caption h1, .carousel-center-caption .lead {
@@ -126,6 +126,9 @@
     			line-height: 1.25;
     			color: #fff;
     			text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+    		}
+    		.darker h1 {
+    			color: #ddd;
     		}
     		.carousel-caption .btn {
     			margin-top: 10px;
@@ -327,6 +330,9 @@
     				width: 65%;
     				padding: 0 70px;
     				margin-top: 125px;
+    			}
+    			.carousel-center-caption {
+    				padding: 0 300px;
     			}
     		}
     		@media(max-width: 1200px) {
