@@ -1,34 +1,39 @@
-<script src="/js/lang.js"></script>
+		<script src="/js/lang.js"></script>
+		<script src="/js/scrolling-nav.js"></script>
+    
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
 
-<div class="navbar-wrapper">
-  <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-  <div class="container">
+                    <a class="navbar-brand page-scroll" href="/"><i class="fa fa-home"></i> La Maison des Amis</a>  
+                </div>
 
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-        <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="brand" href="/fr">La Maison des Amis</a>
-        <div class="nav-flags pull-right">
-              <a href="#" onClick="switchLang('en', window.location.pathname)"><img src="/images/flag_eng.png" alt="" title="In English"/></a>
-        </div>
-        <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-        <div class="nav-collapse collapse pull-right">
-          <ul class="nav">
-            <li><a href="/fr/about">A propos</a></li>
-            <li><a href="/fr/rates">Tarifs</a></li>
-            <!-- Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns -->
-            <li><a href="/fr/guest-book">Livre d'or</a></li>
-            <li><a href="/fr/links">Liens utiles</a></li>
-			<li><a href="/fr/contact"><i class="fa fa-phone"></i></a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div><!-- /.navbar-inner -->
-    </div><!-- /.navbar -->
-  </div> <!-- /.container -->
-</div><!-- /.navbar-wrapper -->
-   
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse navbar-ex1-collapse pull-right">
+
+                    <ul class="nav navbar-nav">
+                        <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+	                        <li>
+							<div class="nav-flags">
+							      <a href="#" onClick="switchLang('en', window.location.pathname)"><img src="/images/flag_eng.png" alt="" title="In English"/></a>
+							</div>
+	                        </li>
+							<li><a class="page-scroll" href="/fr/about">A propos</a></li>
+							<li><a class="page-scroll" href="/fr/rates">Tarifs</a></li>
+							<li><a class="page-scroll" href="/fr/guest-book">Livre d'or</a></li>
+							<li><a class="page-scroll" href="/fr/links">Liens utiles</a></li>
+							<li><a class="page-scroll" href="/fr/about/#contact"><i class="fa fa-phone"></i></a></li>							
+						</ul>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container -->
+        </nav>   

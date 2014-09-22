@@ -1,137 +1,179 @@
+<!-- Ensure every link box is same height -->
+<script src="/js/grids.min.js"></script>
+<script type="text/javascript">
+	jQuery(function($) {
+		var $elements = $('.link-box');
+		var columns = $elements.detectGridColumns();
+		$elements.equalHeightGrid(columns);
+	});
+</script>
+
 <div class="container links">    
 	<h2 class="featurette-heading">Liens <span class="muted">utiles</span></h2>
+	
 	<div class="row">
-		<div class="well span8 offset2">
-			<p>With 5 acres and a large pool, La Maison des Amis is a great place to relax. But the Tarn really is one of France's hidden treasures - there's no shortage of things to see and do in the area.</p>
-			<p>Here's a list of some of our favourites.</p>
+		<div class="well col-md-8 col-md-offset-2">
+			<p>With 5 acres and a large pool, La Maison des Amis is a great place to relax. But the Tarn really is one of France's hidden treasures - there's no shortage of things to see and do in the area. Here's some of our favourites.</p>
 		</div>
 	</div>
 	
 	<div class="row">
-		<div class="span3">
-			<div class="link-box">
-				<p class="title">Tarn Tourism</p>
-				<p>The first place to look for more information on what to do and see in the region, including where to eat and what's on.</p>
-				<a href="http://www.tourisme-tarn.com/en"><img src="/images/tourism-tarn.jpg"></a>
-			</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+			<a href="http://www.albi-tourisme.fr/us/">
+				<div class="link-box">
+					<h5>Albi Cathedral</h5>
+					<p>A must visit, the largest brick building in the world, it is stunning! And right beside - The Toulouse-Lautrec museum. Not to mention some very nice restaurants for lunch or dinner.</p>
+					<img src="/images/albi-cathedral-small.jpg">
+				</div>
+			</a>
 		</div>
-		<div class="span3">
-			<div class="link-box">
-				<p class="title">Les Jardins des Martels</p>
-				<p>Literally across the road, the second most visited paying tourist site in the Tarn. Wonderful!</p>
-				<a href="http://www.jardinsdesmartels.com"><img src="/images/les-jardins.jpg"></a>
-			</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+			<a href="http://www.jardinsdesmartels.com">
+				<div class="link-box">
+					<h5>Les Jardins des Martels</h5>
+					<p>Literally across the road from La Maison des Amis, the second most visited paying tourist site in the Tarn. Wonderful!</p>
+					<img src="/images/les-jardins.jpg">
+				</div>
+			</a>
 		</div>
-		<div class="span3">
-			<div class="link-box">
-				<p class="title">Cri de Tarzan</p>
-				<p>This really is fun for all the family. If you've never tried it, it's a must! Great spot too for a picnic for those that prefer not to partake.</p>
-				<a href="http://www.lecridetarzan.com"><img src="/images/tarzan-small.jpg"></a>
-			</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+			<a href="http://www.lecridetarzan.com">
+				<div class="link-box">
+					<h5>Cri de Tarzan</h5>
+					<p>This really is fun for all the family. If you've never tried it, it's a must! Great spot too for a picnic for those that prefer not to partake.</p>
+					<img src="/images/tarzan-small.jpg">
+				</div>
+			</a>
 		</div>
-		<div class="span3">
-			<div class="link-box">
-				<p class="title">Canoeing</p>
-				<p>We are surrounded by rivers but its worth taking the 50 min drive to St Antoine Noble Val. Take a picnic and make a day of it!</p>
-				<a href="http://www.locationcanoe.com"><img src="/images/tarn-canoe-small.jpg"></a>
-			</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+			<a href="http://www.locationcanoe.com">
+				<div class="link-box">
+					<h5>Canoeing</h5>
+					<p>We are surrounded by rivers but it's worth taking the 50 min drive to St Antoine Noble Val. Take a picnic and make a day of it!</p>
+					<img src="/images/tarn-canoe-small.jpg">
+				</div>
+			</a>
 		</div>
-	  </div>
-	  <div class="row">
-		
-	  	<div class="span3">
-	  		<div class="link-box">
-	  			<p class="title">Local restaurants</p>
-	  			<p>Le Colvert is a magical spot, particularly in summer, and just down the road. But it gets a real run for its money in L'Assiette au Comptoir. Honourable mentions too for Les Rosiers de Cocagne, L'Echauguette and La Pitcholina.</p>
-	  			<a href="/restaurants"><img src="/images/local-restaurants.jpg"></a>
-	  		</div>
+
+	  	<div class="col-sm-6 col-md-4 col-lg-3">
+	  		<a href="/restaurants">
+		  		<div class="link-box">
+		  			<h5>Local restaurants</h5>
+		  			<p>Le Colvert is a magical spot, particularly in summer, and just down the road. But it gets a real run for its money in L'Assiette au Comptoir. Honourable mentions too for Les Rosiers de Cocagne, L'Echauguette and La Pitcholina.</p>
+		  			<img src="/images/local-restaurants.jpg">
+		  		</div>
+	  		</a>
 	  	</div>
-	  	<div class="span3">
-	  		<div class="link-box">
-	  			<p class="title">Local markets</p>
-	  			<p>A trip to the Tarn is not complete without a visit to one of the local markets.</p>
-	  			<a href="/markets"><img src="/images/local-markets-small.jpg"></a>
-	  		</div>
+	  	<div class="col-sm-6 col-md-4 col-lg-3">
+		  	<a href="http://www.vins-gaillac.com/en">
+		  		<div class="link-box">
+		  			<h5>Vineyards</h5>
+		  			<p>A visit to France is not complete without a visit to the vineyards. La fête du vin de Gaillac is fabulous. The Friday night apéro concerts are great fun too!</p>
+		  			<img src="/images/gaillac-vineyards.jpg">
+		  		</div>
+	  		</a>
 	  	</div>
-	  	<div class="span3">
-	  		<div class="link-box">
-	  			<p class="title">Vineyards</p>
-	  			<p>A visit to France is not complete without a visit to the vineyards. La fête du vin de Gaillac is fabulous. The Friday night apéro concerts are great fun too!</p>
-	  			<a href="http://www.vins-gaillac.com/en"><img src="/images/gaillac-vineyards.jpg"></a>
-	  		</div>
+	  	<div class="col-sm-6 col-md-4 col-lg-3">
+	  		<a href="/markets">
+		  		<div class="link-box">
+		  			<h5>Local markets</h5>
+		  			<p>A trip to the Tarn is not complete without a visit to one of the local markets.</p>
+		  			<img src="/images/olives.jpg">
+		  			<img src="/images/butcher.jpg">
+		  		</div>
+	  		</a>
 	  	</div>
-	  	<div class="span3">
-	  		<div class="link-box">
-	  			<p class="title">Albi Cathedral</p>
-	  			<p>A must visit, it is stunning!</p>
-	  			<a href="http://www.albi-tourisme.fr/us/"><img src="/images/albi-cathedral-small.jpg"></a>
-	  		</div>
+	  	<div class="col-sm-6 col-md-4 col-lg-3">
+	  		<a href="http://www.manatour.fr">
+		  		<div class="link-box">
+		  			<h5>Airbus Factory</p>
+		  			<img src="/images/airbus-small.jpg">
+		  		</div>
+	  		</a>
 	  	</div>
+	  	<!--
 	</div>
 	<div class="row">
-		<div class="span3">
-			<div class="link-box">
-				<p class="title">Airbus Factory</p>
-				<a href="http://www.manatour.fr"><img src="/images/airbus-small.jpg"></a>
-				<p></p>
-			</div>
+	-->
+		<div class="col-sm-6 col-md-4 col-lg-3">
+			<a href="http://www.caliceo.com/toulouse/espace-balneo/">
+				<div class="link-box">
+					<h5>Calecio Spa</h5>
+					<p>We don't go often enough but this place is great. Facilities are top class, you might even get to see the Stade Toulousain team!</p>
+					<<img src="/images/calecio-small.jpg">
+				</div>
+			</a>
 		</div>
-		<div class="span3">
-			<div class="link-box">
-				<p class="title">Calecio Spa</p>
-				<p>We don't go often enough but this place is great. Facilities are top class, you might even get to see the Stade Toulousain team!</p>
-				<a href="http://www.caliceo.com/toulouse/espace-balneo/"><img src="/images/calecio-small.jpg"></a>
-			</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+			<a href="http://www.cftt.org">
+				<div class="link-box">
+					<h5>Tourist Train</h5>
+					<p>For the wee ones, take the train that runs past the end of the garden from Les Jardins des Martels to St Lieux.</p>
+					<img src="/images/tourist-train.jpg">
+				</div>
+			</a>
 		</div>
-		<div class="span3">
-			<div class="link-box">
-				<p class="title">Tourist Train</p>
-				<p>For the wee ones, take the train that runs past the end of the garden from Les Jardins des Martels to St Lieux.</p>
-				<a href="http://www.cftt.org"><img src="/images/tourist-train.jpg"></a>
-			</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+			<a href="http://www.vert-marine.com/cap-decouverte-le-garric-81">
+				<div class="link-box">
+					<h5>Cap Decouverte</h5>
+					<p>Inexpensive and great fun park, transformed from an old open cast mine. Can be very hot in high summer.</p>
+					<img src="/images/capdecouverte.jpg">
+				</div>
+			</a>
 		</div>
-		<div class="span3">
-			<div class="link-box">
-				<p class="title">Cap Decouverte</p>
-				<p>Inexpensive and great fun park, transformed from an old open cast mine. Can be very hot in high summer.</p>
-				<a href="http://www.vert-marine.com/cap-decouverte-le-garric-81"><img src="/images/capdecouverte.jpg"></a>
-			</div>
+		<div class="col-sm-6 col-md-4 col-lg-3">
+			<a href="http://www.paintball-a-damiatte.fr/">
+				<div class="link-box">
+					<h5>Paintball & Laserquest</h5>
+					<p>Our kids love it! Paintball at Puylarens, Laserquest at Toulouse.</p>
+					<img src="/images/paintball.jpg">
+				</div>
+			</a>
 		</div>
 		
-	  </div>
-	  <div class="row">
-	  	<div class="span3">
-	  		<div class="link-box">
-	  			<p class="title">Paintball & Laserquest</p>
-	  			<p>Our kids love it! Paintball at Puylarens, Laserquest at Toulouse.</p>
-	  			<a href="http://www.paintball-a-damiatte.fr/"><img src="/images/paintball.jpg"></a>
-	  		</div>
+  	<!--
+</div>
+<div class="row">
+-->
+	  	<div class="col-sm-6 col-md-4 col-lg-3">
+		  	<a href="http://www.stadetoulousain.fr">
+		  		<div class="link-box">
+		  			<h5>Stade Toulousain</h5>
+		  			<p>Heineken Cup rugby against Toulouse - a great weekend!</p>
+		  			<img src="/images/stade-toulousain-small.jpg">
+		  		</div>
+	  		</a>
 	  	</div>
-	  	<div class="span3">
-	  		<div class="link-box">
-	  			<p class="title">Stade Toulousain</p>
-	  			<p>Heineken Cup rugby against Toulouse - a great weekend!</p>
-	  			<a href="http://www.stadetoulousain.fr"><img src="/images/stade-toulousain-small.jpg"></a>
-	  		</div>
+	  	<div class="col-sm-6 col-md-4 col-lg-3">
+		  	<a href="www.castres-olympique.com">
+		  		<div class="link-box">
+		  			<h5>Castres Olympic</h5>
+		  			<p>Top 14 Champions 2013, a hard place to get a result, always a great atmosphere!</p>
+		  			<img src="/images/castres-olympique-small.jpg">
+		  		</div>
+	  		</a>
 	  	</div>
-	  	<div class="span3">
-	  		<div class="link-box">
-	  			<p class="title">Castres Olympic</p>
-	  			<p>Top 14 Champions 2013, a hard place to get a result, always a great atmosphere!</p>
-	  			<a href="www.castres-olympique.com"><img src="/images/castres-olympique-small.jpg"></a>
-	  		</div>
+	  	<div class="col-sm-6 col-md-4 col-lg-3">
+	  		<a href="http://www.quad-aubepine.com/le-domaine.php">
+		  		<div class="link-box">
+		  			<h5>Quad Biking</h5>
+		  			<p>The hills around Puylaurens are spectacular, you can even take the kids.</p>
+		  			<img src="/images/quad.jpg">
+		  		</div>
+	  		</a>
 	  	</div>
-	  	<div class="span3">
-	  		<div class="link-box">
-	  			<p class="title">Quad Biking</p>
-	  			<p>The hills around Puylaurens are spectacular, you can even take the kids.</p>
-	  			<a href="http://www.quad-aubepine.com/le-domaine.php"><img src="/images/quad.jpg"></a>
-	  		</div>
-	  	</div>
-	  </div>
-	  <div class="row">
-	  	<div class="span6 offset3">
-	      <p class="well">Even if you wanted, we suspect you would struggle to squeeze all that into a 2 week stay!</p>
-		</div>
+</div>
+<div class="row">
+	    <div class="col-sm-12 col-md-6 col-md-offset-3">
+		    <a href="http://www.tourisme-tarn.com/en">
+		    	<div class="link-box">
+		    		<h5>Tarn Tourism</h5>
+		    		<p>The first place to look for more information on what to do and see in the region, including where to eat and what's on.</p>
+		    		<img src="/images/tourism-tarn.jpg">
+		    		<p>Even if you wanted, we suspect you would struggle to squeeze all this into a 2 week stay!</p>
+		    	</div>
+	    	</a>
+	    </div>
 	  </div>
 </div>
