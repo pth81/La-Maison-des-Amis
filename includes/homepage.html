@@ -308,15 +308,16 @@
   	<hr class="featurette-divider">
   	<div class="featurette">
   		<img class="featurette-image pull-left shadow" src="/images/paul-and-nadia.jpg">
-		<h2 class="featurette-heading">Contact <span class="muted">us</span></h2>
-		<p class="lead"><i class="fa fa-phone"></i> +33 5 63 41 87 32</p>
-		<p class="lead"><i class="fa fa-envelope"></i> <a href="mailto:info@darrach.net">info@darrach.net</a></p>
-		<p class="lead"><i class="fa fa-mobile"></i> +33 6 13 33 65 33 (Nadia)</p>
-		<p class="lead"><i class="fa fa-mobile"></i> +33 6 18 51 23 85 (Paul)</p>
-		  	<hr class="featurette-divider">
-		  	<p class="lead">
-		  		<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=43.7631&lon=1.77693&name=Giroussens&color=#0088cc&units=uk"></iframe>
-		  	</p>
+		  
+		<!-- Include Contact details -->
+		<!-- File is html but is itself included in a php file -->
+		<?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/contact.html"); ?>	
+
+
+	  	<hr class="featurette-divider">
+	  	<p class="lead">
+	  		<iframe id="forecast_embed" type="text/html" frameborder="0" height="245" width="100%" src="http://forecast.io/embed/#lat=43.7631&lon=1.77693&name=Giroussens&color=#0088cc&units=uk"></iframe>
+	  	</p>
   </div>
   
   <!-- Dynamically set height of the carousel to keep aspect ratio   -->
