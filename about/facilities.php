@@ -22,7 +22,7 @@
 	<!-- Include NAVBAR
 	================================================== -->
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/" . $LANG . "/nav.html"); ?>
-	
+
 	<!-- Include CONTENT
 	================================================== -->
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/" . $LANG . "/facilities.html"); ?>

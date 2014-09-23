@@ -25,7 +25,7 @@
 	
 	<!-- Include CONTENT
 	================================================== -->
-	<?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/" . $LANG . "/availability.html"); ?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . "/includes/" . $LANG . "/availability.html"); ?>
 
 	<!-- Include FOOTER
 	================================================== -->
