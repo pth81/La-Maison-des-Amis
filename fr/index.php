@@ -5,7 +5,7 @@
 <html lang="fr">
 	<head>
 		<meta charset="utf-8">
-		<title>La Maison des Amis - Gîte avec Piscine dans Le Tarn. Giroussens, 10 KM de Lavaur, Rabastens, St Sulpice.</title>
+		<title>La Maison des Amis - Gîte avec Piscine et wifi dans Le Tarn. Giroussens, 10 KM de Lavaur, Rabastens, St Sulpice.</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="">
 		
