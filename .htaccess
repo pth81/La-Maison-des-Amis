@@ -60,3 +60,26 @@ Redirect 301 /fr/towns/ /fr/about/towns.php
 Redirect 301 /fr/towns /fr/about/towns.php
 Redirect 301 /fr/about/towns/ /fr/about/towns.php
 Redirect 301 /fr/about/towns /fr/about/towns.php
+
+# Redirects for old site
+Redirect 301 /fr/others.html /
+Redirect 301 /es/others.html /
+Redirect 301 /eng/others.html /
+
+Redirect 301 /eng/toulouse.html /
+Redirect 301 /eng/gaillac.html /
+Redirect 301 /eng/albi.html /
+Redirect 301 /eng/lavaur.html /
+Redirect 301 /fr/toulouse.html /
+Redirect 301 /fr/gaillac.html /
+Redirect 301 /fr/albi.html /
+Redirect 301 /fr/lavaur.html /
+
+Redirect 301 /exterior.html /
+Redirect 301 /interior.html /
+Redirect 301 /fr/exterior.html /
+Redirect 301 /fr/interior.html /
+
+Redirect 301 /eng/chambres.html /
+Redirect 301 /fr/chambres.html /
+

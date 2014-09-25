@@ -5,7 +5,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>La Maison des Amis - Family holiday rental in the Heart of the Tarn, France</title>
+    <title>La Maison des Amis - Availability</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -25,7 +25,7 @@
 	
 	<!-- Include CONTENT
 	================================================== -->
-	<?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/" . $LANG . "/availability.html"); ?>
+	<?php require($_SERVER['DOCUMENT_ROOT'] . "/includes/" . $LANG . "/availability.html"); ?>
 
 	<!-- Include FOOTER
 	================================================== -->
