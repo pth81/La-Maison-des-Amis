@@ -1,3 +1,4 @@
+RewriteEngine on
 
 Redirect 301 /availability/ /about/availability.php
 Redirect 301 /availability /about/availability.php
@@ -28,8 +29,6 @@ Redirect 301 /towns/ /about/towns.php
 Redirect 301 /towns /about/towns.php
 Redirect 301 /about/towns/ /about/towns.php
 Redirect 301 /about/towns /about/towns.php
-
-
 
 Redirect 301 /fr/availability/ /fr/about/availability.php
 Redirect 301 /fr/availability /fr/about/availability.php
@@ -83,3 +82,14 @@ Redirect 301 /fr/interior.html /
 Redirect 301 /eng/chambres.html /
 Redirect 301 /fr/chambres.html /
 
+RewriteCond %{HTTP_HOST} ^darrach\.net$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.darrach\.net$
+RewriteRule ^/?$ "http\:\/\/lamaisondesamis\.fr\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^lochlann\.net$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.lochlann\.net$
+RewriteRule ^/?$ "http\:\/\/lamaisondesamis\.fr\/" [R=301,L]
+
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
