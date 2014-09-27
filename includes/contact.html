@@ -1,4 +1,13 @@
-			<h2 class="featurette-heading">Contact <span class="muted">us</span></h2>
+              <script src="/js/url.min.js"></script>
+              <script>
+              if (window.url('1', document.URL) == 'fr') {
+              	document.writeln("<h2 class='featurette-heading'>", "Contactez <span class='muted'>nous", "</span></h2>");
+              } else {
+              	document.writeln("<h2 class='featurette-heading'>", "Contact <span class='muted'>us", "</span></h2>");
+
+              }
+              </script>      
+
 			<p class="lead"><i class="fa fa-phone"></i> +33 5 63 41 87 32</p>
 			<p class="lead"><i class="fa fa-envelope"></i> 
 				<script language="JavaScript">
