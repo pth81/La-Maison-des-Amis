@@ -2,38 +2,71 @@
 <!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>http://darrach.net/about/</loc>
+    <loc>http://lamaisondesamis.fr/fr/about/</loc>
   </url>
   <url>
-    <loc>http://darrach.net/about/availability.php</loc>
+    <loc>http://lamaisondesamis.fr/about/</loc>
   </url>
   <url>
-    <loc>http://darrach.net/about/facilities.php</loc>
+    <loc>http://lamaisondesamis.fr/about/availability.php</loc>
   </url>
   <url>
-    <loc>http://darrach.net/</loc>
+    <loc>http://lamaisondesamis.fr/fr/links/</loc>
   </url>
   <url>
-    <loc>http://darrach.net/about/markets.php</loc>
+    <loc>http://lamaisondesamis.fr/fr/about/availability.php</loc>
   </url>
   <url>
-    <loc>http://darrach.net/about/restaurants.php</loc>
+    <loc>http://lamaisondesamis.fr/about/facilities.php</loc>
   </url>
   <url>
-    <loc>http://darrach.net/about/towns.php</loc>
+    <loc>http://lamaisondesamis.fr/fr/about/facilities.php</loc>
   </url>
   <url>
-    <loc>http://darrach.net/about/photos.php</loc>
+    <loc>http://lamaisondesamis.fr/</loc>
   </url>
   <url>
-    <loc>http://darrach.net/rates/</loc>
+    <loc>http://lamaisondesamis.fr/fr/</loc>
   </url>
   <url>
-    <loc>http://darrach.net/links/</loc>
+    <loc>http://lamaisondesamis.fr/fr/guest-book/</loc>
   </url>
   <url>
-    <loc>http://darrach.net/guest-book/</loc>
+    <loc>http://lamaisondesamis.fr/about/markets.php</loc>
+  </url>
+  <url>
+    <loc>http://lamaisondesamis.fr/about/restaurants.php</loc>
+  </url>
+  <url>
+    <loc>http://lamaisondesamis.fr/about/towns.php</loc>
+  </url>
+  <url>
+    <loc>http://lamaisondesamis.fr/fr/about/markets.php</loc>
+  </url>
+  <url>
+    <loc>http://lamaisondesamis.fr/about/photos.php</loc>
+  </url>
+  <url>
+    <loc>http://lamaisondesamis.fr/fr/about/photos.php</loc>
+  </url>
+  <url>
+    <loc>http://lamaisondesamis.fr/rates/</loc>
+  </url>
+  <url>
+    <loc>http://lamaisondesamis.fr/fr/about/restaurants.php</loc>
+  </url>
+  <url>
+    <loc>http://lamaisondesamis.fr/fr/rates/</loc>
+  </url>
+  <url>
+    <loc>http://lamaisondesamis.fr/links/</loc>
+  </url>
+  <url>
+    <loc>http://lamaisondesamis.fr/fr/about/towns.php</loc>
+  </url>
+  <url>
+    <loc>http://lamaisondesamis.fr/guest-book/</loc>
   </url>
 </urlset>
-<!--<guid value="60145de6-66e1-48d1-8c91-0ca10252b2ef" />-->
+<!--<guid value="28858470-6724-46ab-a255-f3fe0118145e" />-->
 <!--Created using XmlSitemapGenerator.org - Free HTML, RSS and XML sitemap generator-->
