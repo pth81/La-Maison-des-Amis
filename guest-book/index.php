@@ -1,6 +1,3 @@
-<!-- Set default language -->
-<?php $LANG = ""; if (strcmp(substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 1,2), "fr") == 0) {$LANG = "fr";} ?>
- 	
 <!DOCTYPE html>
 <html lang="en">
 	<head>

@@ -60,6 +60,68 @@ Redirect 301 /fr/towns /fr/about/towns.php
 Redirect 301 /fr/about/towns/ /fr/about/towns.php
 Redirect 301 /fr/about/towns /fr/about/towns.php
 
+Redirect 301 /es/availability/ /es/about/availability.php
+Redirect 301 /es/availability /es/about/availability.php
+Redirect 301 /es/about/availability/ /es/about/availability.php
+Redirect 301 /es/about/availability /es/about/availability.php
+
+Redirect 301 /es/facilities/ /es/about/facilities.php
+Redirect 301 /es/facilities /es/about/facilities.php
+Redirect 301 /es/about/facilities/ /es/about/facilities.php
+Redirect 301 /es/about/facilities /es/about/facilities.php
+
+Redirect 301 /es/markets/ /es/about/markets.php
+Redirect 301 /es/markets /es/about/markets.php
+Redirect 301 /es/about/markets/ /es/about/markets.php
+Redirect 301 /es/about/markets /es/about/markets.php
+
+Redirect 301 /es/photos/ /es/about/photos.php
+Redirect 301 /es/photos /es/about/photos.php
+Redirect 301 /es/about/photos/ /es/about/photos.php
+Redirect 301 /es/about/photos /es/about/photos.php
+
+Redirect 301 /es/restaurants/ /es/about/restaurants.php
+Redirect 301 /es/restaurants /es/about/restaurants.php
+Redirect 301 /es/about/restaurants/ /es/about/restaurants.php
+Redirect 301 /es/about/restaurants /es/about/restaurants.php
+
+Redirect 301 /es/towns/ /es/about/towns.php
+Redirect 301 /es/towns /es/about/towns.php
+Redirect 301 /es/about/towns/ /es/about/towns.php
+Redirect 301 /es/about/towns /es/about/towns.php
+
+Redirect 301 /cat/availability/ /cat/about/availability.php
+Redirect 301 /cat/availability /cat/about/availability.php
+Redirect 301 /cat/about/availability/ /cat/about/availability.php
+Redirect 301 /cat/about/availability /cat/about/availability.php
+
+Redirect 301 /cat/facilities/ /cat/about/facilities.php
+Redirect 301 /cat/facilities /cat/about/facilities.php
+Redirect 301 /cat/about/facilities/ /cat/about/facilities.php
+Redirect 301 /cat/about/facilities /cat/about/facilities.php
+
+Redirect 301 /cat/markets/ /cat/about/markets.php
+Redirect 301 /cat/markets /cat/about/markets.php
+Redirect 301 /cat/about/markets/ /cat/about/markets.php
+Redirect 301 /cat/about/markets /cat/about/markets.php
+
+Redirect 301 /cat/photos/ /cat/about/photos.php
+Redirect 301 /cat/photos /cat/about/photos.php
+Redirect 301 /cat/about/photos/ /cat/about/photos.php
+Redirect 301 /cat/about/photos /cat/about/photos.php
+
+Redirect 301 /cat/restaurants/ /cat/about/restaurants.php
+Redirect 301 /cat/restaurants /cat/about/restaurants.php
+Redirect 301 /cat/about/restaurants/ /cat/about/restaurants.php
+Redirect 301 /cat/about/restaurants /cat/about/restaurants.php
+
+Redirect 301 /cat/towns/ /cat/about/towns.php
+Redirect 301 /cat/towns /cat/about/towns.php
+Redirect 301 /cat/about/towns/ /cat/about/towns.php
+Redirect 301 /cat/about/towns /cat/about/towns.php
+
+
+
 # Redirects for old site
 Redirect 301 /fr/others.html /
 Redirect 301 /es/others.html /

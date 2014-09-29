@@ -1,8 +1,5 @@
-<!-- Set default language -->
-<?php $LANG = "/"; if (strcmp(substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 1,2), "fr") == 0) {$LANG = "fr";} ?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="utf-8">
     <title>La Maison des Amis - Marchés du Tarn, France</title>

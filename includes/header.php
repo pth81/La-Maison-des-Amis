@@ -1,3 +1,7 @@
+<!-- Set default language -->
+<?php if (strcmp(substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 1,2), "fr") == 0) {$LANG = "fr";} elseif (strcmp(substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 1,2), "es") == 0) {$LANG = "es";} elseif (strcmp(substr(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), 1,3), "cat") == 0) {$LANG = "cat";} else {$LANG = "/";} ?>
+
+
 	<meta name="author" content="Paul Hickey">
 	
 	<!-- Le styles -->

@@ -21,10 +21,18 @@
                         <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                         <li></li>
                         <li>
-                        	<div class="nav-flags">
-                        		<a  href="#" onClick="switchLang('fr',window.location.pathname)"><img src="/images/flag_france.png" alt="" title="En Français"/></a>
-                        	</div> 
-                    	</li>
+                        	<div class="dropdown">
+                        	  <button class="btn btn-default dropdown-toggle" type="button" id="langMenu" data-toggle="dropdown">
+                        	    <img src="/images/uk.png" alt="" title="English"/></a>
+                        	    <span class="caret"></span>
+                        	  </button>
+                        	  <ul class="dropdown-menu" role="menu" aria-labelledby="langMenu">							
+                        		    <li> <a href="#" onClick="switchLang('cat', window.location.pathname)"><img src="/images/cat.png" alt="" title="Catalan"/> Catalan</a></li>
+                          	    <li> <a href="#" onClick="switchLang('fr', window.location.pathname)"><img src="/images/fr.png" alt="" title="Français"/> Français</a></li>
+                          	    <li> <a href="#" onClick="switchLang('es', window.location.pathname)"><img src="/images/es.png" alt="" title="Español"/> Español</a></li>
+                        	  </ul>
+                        	</div>
+                        </li>
 						<li><a class="page-scroll" href="/about">About</a></li>
 						<li><a class="page-scroll" href="/rates">Rates</a></li>
 						<li><a class="page-scroll" href="/guest-book">Guest book</a></li>
