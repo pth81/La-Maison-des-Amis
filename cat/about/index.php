@@ -24,7 +24,6 @@
 	================================================== -->
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/" . $LANG . "/about.html"); ?>
 
-<?php echo $LANG ?>
 	<!-- Include FOOTER
 	================================================== -->
 	<?php include($_SERVER['DOCUMENT_ROOT'] . "/includes/" . $LANG . "/footer.html"); ?>
