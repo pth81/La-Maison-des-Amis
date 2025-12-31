@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Waves, Wifi, Bed, ChefHat, Trees } from "lucide-react";
 
 export function generateStaticParams() {
     return [{ lang: "en" }, { lang: "fr" }, { lang: "es" }, { lang: "cat" }];
@@ -44,57 +45,90 @@ export default async function RatesPage({ params }: PageProps) {
         <>
             <Navbar lang={lang} />
 
-            <div className="container rates">
-                <div className="row">
-                    <div className="col-md-12">
-                        <h1>{getText("title")}</h1>
-                        <p className="lead">{getText("lead")}</p>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">{getText("title")}</h1>
+                <p className="text-xl text-gray-600 mb-12">{getText("lead")}</p>
+
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                    {/* Peak Season */}
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div className="bg-primary-600 text-white px-6 py-4">
+                            <h2 className="text-2xl font-semibold">{getText("peakSeason")}</h2>
+                        </div>
+                        <div className="overflow-x-auto">
+                            <table className="min-w-full divide-y divide-gray-200">
+                                <thead className="bg-gray-50">
+                                    <tr>
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{getText("period")}</th>
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{getText("weeklyRate")}</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="bg-white divide-y divide-gray-200">
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{getText("july")}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">€1,500</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{getText("august")}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">€1,750</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    {/* Off Season */}
+                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <div className="bg-gray-700 text-white px-6 py-4">
+                            <h2 className="text-2xl font-semibold">{getText("offSeason")}</h2>
+                        </div>
+                        <div className="overflow-x-auto">
+                            <table className="min-w-full divide-y divide-gray-200">
+                                <thead className="bg-gray-50">
+                                    <tr>
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{getText("period")}</th>
+                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{getText("rate")}</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="bg-white divide-y divide-gray-200">
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{getText("weekend")}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{getText("from")} €350</td>
+                                    </tr>
+                                    <tr className="hover:bg-gray-50 transition-colors">
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{getText("week")}</td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{getText("from")} €700</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
-                <div className="row">
-                    <div className="col-md-6">
-                        <h2>{getText("peakSeason")}</h2>
-                        <table className="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>{getText("period")}</th>
-                                    <th>{getText("weeklyRate")}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>{getText("july")}</td><td>€1,500</td></tr>
-                                <tr><td>{getText("august")}</td><td>€1,750</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div className="col-md-6">
-                        <h2>{getText("offSeason")}</h2>
-                        <table className="table table-striped">
-                            <thead>
-                                <tr>
-                                    <th>{getText("period")}</th>
-                                    <th>{getText("rate")}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr><td>{getText("weekend")}</td><td>{getText("from")} €350</td></tr>
-                                <tr><td>{getText("week")}</td><td>{getText("from")} €700</td></tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div className="row">
-                    <div className="col-md-12">
-                        <h3>{getText("included")}</h3>
-                        <ul className="included-list">
-                            <li><i className="fa fa-tint"></i> {getText("poolTennis")}</li>
-                            <li><i className="fa fa-wifi"></i> {getText("wifi")}</li>
-                            <li><i className="fa fa-bed"></i> {getText("bedLinen")}</li>
-                            <li><i className="fa fa-cutlery"></i> {getText("kitchen")}</li>
-                            <li><i className="fa fa-tree"></i> {getText("grounds")}</li>
-                        </ul>
+                {/* What's Included */}
+                <div>
+                    <h3 className="text-2xl font-semibold text-gray-900 mb-6">{getText("included")}</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                        <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 border-l-4 border-primary-600">
+                            <Waves className="h-6 w-6 text-primary-600 flex-shrink-0" />
+                            <span className="text-gray-700">{getText("poolTennis")}</span>
+                        </div>
+                        <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 border-l-4 border-primary-600">
+                            <Wifi className="h-6 w-6 text-primary-600 flex-shrink-0" />
+                            <span className="text-gray-700">{getText("wifi")}</span>
+                        </div>
+                        <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 border-l-4 border-primary-600">
+                            <Bed className="h-6 w-6 text-primary-600 flex-shrink-0" />
+                            <span className="text-gray-700">{getText("bedLinen")}</span>
+                        </div>
+                        <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 border-l-4 border-primary-600">
+                            <ChefHat className="h-6 w-6 text-primary-600 flex-shrink-0" />
+                            <span className="text-gray-700">{getText("kitchen")}</span>
+                        </div>
+                        <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 border-l-4 border-primary-600">
+                            <Trees className="h-6 w-6 text-primary-600 flex-shrink-0" />
+                            <span className="text-gray-700">{getText("grounds")}</span>
+                        </div>
                     </div>
                 </div>
             </div>

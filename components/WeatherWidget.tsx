@@ -28,20 +28,16 @@ export default function WeatherWidget() {
     }, []);
 
     return (
-        <a
-            className="weatherwidget-io"
-            href="https://forecast7.com/en/43d761d77/giroussens/"
-            data-label_1="Giroussens"
-            data-label_2="Weather"
-            data-theme="original"
-            style={{
-                display: "block",
-                position: "relative",
-                height: "200px",
-                textDecoration: "none"
-            }}
-        >
-            Giroussens Weather
-        </a>
+        <div className="rounded-lg overflow-hidden shadow-md">
+            <a
+                className="weatherwidget-io block relative h-48 no-underline"
+                href="https://forecast7.com/en/43d761d77/giroussens/"
+                data-label_1="Giroussens"
+                data-label_2="Weather"
+                data-theme="original"
+            >
+                Giroussens Weather
+            </a>
+        </div>
     );
 }

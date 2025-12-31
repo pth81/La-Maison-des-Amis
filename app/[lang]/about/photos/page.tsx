@@ -27,13 +27,19 @@ export default async function PhotosPage({ params }: PageProps) {
     return (
         <>
             <Navbar lang={lang} />
-            <div className="container about">
-                <h1>{getText("title")}</h1>
-                <div className="row">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h1 className="text-4xl font-bold text-gray-900 mb-12">{getText("title")}</h1>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {photos.map((p, i) => (
-                        <div key={i} className="col-md-4">
-                            <img src={p.src} alt={p.caption} className="img-responsive" />
-                            <p className="photo-title">{p.caption}</p>
+                        <div key={i} className="group">
+                            <div className="overflow-hidden rounded-lg shadow-lg mb-4">
+                                <img 
+                                    src={p.src} 
+                                    alt={p.caption} 
+                                    className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                            <p className="text-center text-gray-700 font-medium">{p.caption}</p>
                         </div>
                     ))}
                 </div>

@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Quote } from "lucide-react";
 
 export function generateStaticParams() {
     return [{ lang: "en" }, { lang: "fr" }, { lang: "es" }, { lang: "cat" }];
@@ -34,21 +35,16 @@ export default async function GuestBookPage({ params }: PageProps) {
         <>
             <Navbar lang={lang} />
 
-            <div className="container guest-book">
-                <div className="row">
-                    <div className="col-md-12">
-                        <h1>{getText("title")}</h1>
-                        <p className="lead">{getText("lead")}</p>
-                    </div>
-                </div>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">{getText("title")}</h1>
+                <p className="text-xl text-gray-600 mb-12">{getText("lead")}</p>
 
-                <div className="row">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className="col-md-6">
-                            <blockquote>
-                                <p>{testimonial.quote}</p>
-                                <cite>— {testimonial.author}</cite>
-                            </blockquote>
+                        <div key={index} className="bg-white rounded-lg shadow-lg p-6 border-l-4 border-primary-600">
+                            <Quote className="h-8 w-8 text-primary-600 mb-4" />
+                            <p className="text-gray-700 mb-4 italic">"{testimonial.quote}"</p>
+                            <cite className="text-sm text-gray-600 font-medium not-italic">— {testimonial.author}</cite>
                         </div>
                     ))}
                 </div>

@@ -35,16 +35,27 @@ export default async function MarketsPage({ params }: PageProps) {
     return (
         <>
             <Navbar lang={lang} />
-            <div className="container markets">
-                <h1>{getText("title")}</h1>
-                <p className="lead">{getText("lead")}</p>
-                <table className="table table-striped">
-                    <tbody>
-                        {markets.map((m, i) => (
-                            <tr key={i}><td>{m.day}</td><td>{m.location}</td></tr>
-                        ))}
-                    </tbody>
-                </table>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h1 className="text-4xl font-bold text-gray-900 mb-4">{getText("title")}</h1>
+                <p className="text-xl text-gray-600 mb-12">{getText("lead")}</p>
+                <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <table className="min-w-full divide-y divide-gray-200">
+                        <thead className="bg-gray-50">
+                            <tr>
+                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Day</th>
+                                <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Location</th>
+                            </tr>
+                        </thead>
+                        <tbody className="bg-white divide-y divide-gray-200">
+                            {markets.map((m, i) => (
+                                <tr key={i} className="hover:bg-gray-50 transition-colors">
+                                    <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{m.day}</td>
+                                    <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{m.location}</td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
             <Footer lang={lang} />
         </>

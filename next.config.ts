@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import path from "path";
 
 const nextConfig: NextConfig = {
     output: "export",
@@ -11,7 +12,8 @@ const nextConfig: NextConfig = {
         unoptimized: true,
     },
 
-    // Redirects will be handled by vercel.json for static export
+    // Set workspace root to this directory to silence lockfile warning
+    outputFileTracingRoot: path.join(__dirname, "./"),
 };
 
 export default nextConfig;

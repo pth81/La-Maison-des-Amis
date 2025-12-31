@@ -27,15 +27,21 @@ export default async function TownsPage({ params }: PageProps) {
     return (
         <>
             <Navbar lang={lang} />
-            <div className="container about">
-                <h1>{getText("title")}</h1>
-                <div className="row">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <h1 className="text-4xl font-bold text-gray-900 mb-12">{getText("title")}</h1>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {towns.map((t, i) => (
-                        <div key={i} className="col-md-4">
-                            <div className="link-box">
-                                <img src={t.image} alt={t.name} />
-                                <p className="title">{t.name}</p>
-                                <p><em>{t.distance}</em></p>
+                        <div key={i} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                            <div className="h-64 overflow-hidden">
+                                <img 
+                                    src={t.image} 
+                                    alt={t.name} 
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                />
+                            </div>
+                            <div className="p-6">
+                                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t.name}</h3>
+                                <p className="text-gray-600 italic">{t.distance}</p>
                             </div>
                         </div>
                     ))}
