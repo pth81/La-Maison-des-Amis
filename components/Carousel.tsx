@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 interface CarouselProps {
     lang: string;
@@ -18,43 +18,7 @@ interface Slide {
 }
 
 export default function Carousel({ lang }: CarouselProps) {
-    // Initialize carousel on mount
-    useEffect(() => {
-        const initCarousel = () => {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            const win = window as any;
-            if (typeof window !== "undefined" && win.jQuery) {
-                const $ = win.jQuery;
-                $('#myCarousel').carousel();
-
-                // Set height dynamically
-                const setHeight = () => {
-                    const width = window.innerWidth * 0.6666;
-                    $('.carousel .container').each(function (this: HTMLElement) {
-                        $(this).height(width);
-                    });
-                    $('.carousel img').each(function (this: HTMLElement) {
-                        $(this).height(width);
-                    });
-                };
-
-                setHeight();
-                $(window).on('resize', setHeight);
-                $('#myCarousel').on('slide.bs.carousel', setHeight);
-            }
-        };
-
-        // Wait for jQuery to load
-        const checkJQuery = setInterval(() => {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
-            if (typeof window !== "undefined" && (window as any).jQuery) {
-                clearInterval(checkJQuery);
-                initCarousel();
-            }
-        }, 100);
-
-        return () => clearInterval(checkJQuery);
-    }, []);
+    const [activeIndex, setActiveIndex] = useState(0);
 
     // Translations
     const t = {
@@ -93,17 +57,35 @@ export default function Carousel({ lang }: CarouselProps) {
         { image: "/images/main-slider/image13x1170.jpg", alt: "Cap d'couverte, inexpensive fun park for the kids", title: t.amuseKids, link: { href: "https://www.vert-marine.com/cap-decouverte-le-garric-81/", text: t.learnMore } },
     ];
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setActiveIndex((current) => (current + 1) % slides.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [slides.length]);
+
+    const nextSlide = (e: React.MouseEvent) => {
+        e.preventDefault();
+        setActiveIndex((current) => (current + 1) % slides.length);
+    };
+
+    const prevSlide = (e: React.MouseEvent) => {
+        e.preventDefault();
+        setActiveIndex((current) => (current - 1 + slides.length) % slides.length);
+    };
+
     return (
         <div className="carousel slide" id="myCarousel">
             <div className="carousel-inner">
                 {slides.map((slide, index) => (
-                    <div key={index} className={`item${index === 0 ? " active" : ""}`}>
+                    <div key={index} className={`item${index === activeIndex ? " active" : ""}`}>
                         <img
                             alt={slide.alt}
                             src={slide.image}
                             className={slide.isPortrait ? "portrait" : ""}
+                            style={{ height: "66.66vw", objectFit: "cover" }}
                         />
-                        <div className="container">
+                        <div className="container" style={{ height: "66.66vw" }}>
                             <div className={slide.centerCaption ? "carousel-center-caption" : "carousel-caption" + (slide.isDarker ? " darker" : "")}>
                                 <h1>{slide.title}</h1>
                                 {slide.lead && <h1 className="site-desc">{slide.lead}</h1>}
@@ -117,10 +99,10 @@ export default function Carousel({ lang }: CarouselProps) {
                     </div>
                 ))}
             </div>
-            <a className="left carousel-control" data-slide="prev" href="#myCarousel">
+            <a className="left carousel-control" href="#myCarousel" onClick={prevSlide}>
                 &lsaquo;
             </a>
-            <a className="right carousel-control" data-slide="next" href="#myCarousel">
+            <a className="right carousel-control" href="#myCarousel" onClick={nextSlide}>
                 &rsaquo;
             </a>
         </div>
