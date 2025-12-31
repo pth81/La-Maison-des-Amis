@@ -45,32 +45,34 @@ export default async function RatesPage({ params }: PageProps) {
         <>
             <Navbar lang={lang} />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">{getText("title")}</h1>
-                <p className="text-xl text-gray-600 mb-12">{getText("lead")}</p>
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div className="text-center mb-16">
+                    <h1 className="font-heading text-4xl sm:text-5xl text-primary-800 mb-4">{getText("title")}</h1>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">{getText("lead")}</p>
+                </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 mb-20">
                     {/* Peak Season */}
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div className="bg-primary-600 text-white px-6 py-4">
-                            <h2 className="text-2xl font-semibold">{getText("peakSeason")}</h2>
+                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-cream-200">
+                        <div className="bg-gradient-to-r from-primary-600 to-primary-700 text-white px-8 py-6">
+                            <h2 className="font-heading text-3xl">{getText("peakSeason")}</h2>
                         </div>
-                        <div className="overflow-x-auto">
-                            <table className="min-w-full divide-y divide-gray-200">
-                                <thead className="bg-gray-50">
-                                    <tr>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{getText("period")}</th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{getText("weeklyRate")}</th>
+                        <div className="p-8">
+                            <table className="w-full">
+                                <thead>
+                                    <tr className="border-b border-cream-200">
+                                        <th className="pb-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">{getText("period")}</th>
+                                        <th className="pb-4 text-right text-sm font-medium text-gray-500 uppercase tracking-wider">{getText("weeklyRate")}</th>
                                     </tr>
                                 </thead>
-                                <tbody className="bg-white divide-y divide-gray-200">
-                                    <tr className="hover:bg-gray-50 transition-colors">
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{getText("july")}</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">€1,500</td>
+                                <tbody>
+                                    <tr className="border-b border-cream-100">
+                                        <td className="py-5 text-lg font-medium text-gray-800">{getText("july")}</td>
+                                        <td className="py-5 text-right text-2xl font-semibold text-primary-700">€1,500</td>
                                     </tr>
-                                    <tr className="hover:bg-gray-50 transition-colors">
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{getText("august")}</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">€1,750</td>
+                                    <tr>
+                                        <td className="py-5 text-lg font-medium text-gray-800">{getText("august")}</td>
+                                        <td className="py-5 text-right text-2xl font-semibold text-primary-700">€1,750</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -78,26 +80,26 @@ export default async function RatesPage({ params }: PageProps) {
                     </div>
 
                     {/* Off Season */}
-                    <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <div className="bg-gray-700 text-white px-6 py-4">
-                            <h2 className="text-2xl font-semibold">{getText("offSeason")}</h2>
+                    <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-cream-200">
+                        <div className="bg-gradient-to-r from-sage-600 to-sage-700 text-white px-8 py-6">
+                            <h2 className="font-heading text-3xl">{getText("offSeason")}</h2>
                         </div>
-                        <div className="overflow-x-auto">
-                            <table className="min-w-full divide-y divide-gray-200">
-                                <thead className="bg-gray-50">
-                                    <tr>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{getText("period")}</th>
-                                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">{getText("rate")}</th>
+                        <div className="p-8">
+                            <table className="w-full">
+                                <thead>
+                                    <tr className="border-b border-cream-200">
+                                        <th className="pb-4 text-left text-sm font-medium text-gray-500 uppercase tracking-wider">{getText("period")}</th>
+                                        <th className="pb-4 text-right text-sm font-medium text-gray-500 uppercase tracking-wider">{getText("rate")}</th>
                                     </tr>
                                 </thead>
-                                <tbody className="bg-white divide-y divide-gray-200">
-                                    <tr className="hover:bg-gray-50 transition-colors">
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{getText("weekend")}</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{getText("from")} €350</td>
+                                <tbody>
+                                    <tr className="border-b border-cream-100">
+                                        <td className="py-5 text-lg font-medium text-gray-800">{getText("weekend")}</td>
+                                        <td className="py-5 text-right"><span className="text-sm text-gray-500">{getText("from")}</span> <span className="text-2xl font-semibold text-sage-700">€350</span></td>
                                     </tr>
-                                    <tr className="hover:bg-gray-50 transition-colors">
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{getText("week")}</td>
-                                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-600">{getText("from")} €700</td>
+                                    <tr>
+                                        <td className="py-5 text-lg font-medium text-gray-800">{getText("week")}</td>
+                                        <td className="py-5 text-right"><span className="text-sm text-gray-500">{getText("from")}</span> <span className="text-2xl font-semibold text-sage-700">€700</span></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -106,28 +108,38 @@ export default async function RatesPage({ params }: PageProps) {
                 </div>
 
                 {/* What's Included */}
-                <div>
-                    <h3 className="text-2xl font-semibold text-gray-900 mb-6">{getText("included")}</h3>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                        <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 border-l-4 border-primary-600">
-                            <Waves className="h-6 w-6 text-primary-600 flex-shrink-0" />
-                            <span className="text-gray-700">{getText("poolTennis")}</span>
+                <div className="bg-white rounded-2xl shadow-lg p-10 border border-cream-200">
+                    <h3 className="font-heading text-3xl text-primary-800 mb-8 text-center">{getText("included")}</h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
+                        <div className="flex flex-col items-center text-center p-6 bg-cream-50 rounded-xl">
+                            <div className="bg-primary-100 p-4 rounded-full mb-4">
+                                <Waves className="h-8 w-8 text-primary-700" />
+                            </div>
+                            <span className="text-gray-700 font-medium">{getText("poolTennis")}</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 border-l-4 border-primary-600">
-                            <Wifi className="h-6 w-6 text-primary-600 flex-shrink-0" />
-                            <span className="text-gray-700">{getText("wifi")}</span>
+                        <div className="flex flex-col items-center text-center p-6 bg-cream-50 rounded-xl">
+                            <div className="bg-primary-100 p-4 rounded-full mb-4">
+                                <Wifi className="h-8 w-8 text-primary-700" />
+                            </div>
+                            <span className="text-gray-700 font-medium">{getText("wifi")}</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 border-l-4 border-primary-600">
-                            <Bed className="h-6 w-6 text-primary-600 flex-shrink-0" />
-                            <span className="text-gray-700">{getText("bedLinen")}</span>
+                        <div className="flex flex-col items-center text-center p-6 bg-cream-50 rounded-xl">
+                            <div className="bg-primary-100 p-4 rounded-full mb-4">
+                                <Bed className="h-8 w-8 text-primary-700" />
+                            </div>
+                            <span className="text-gray-700 font-medium">{getText("bedLinen")}</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 border-l-4 border-primary-600">
-                            <ChefHat className="h-6 w-6 text-primary-600 flex-shrink-0" />
-                            <span className="text-gray-700">{getText("kitchen")}</span>
+                        <div className="flex flex-col items-center text-center p-6 bg-cream-50 rounded-xl">
+                            <div className="bg-primary-100 p-4 rounded-full mb-4">
+                                <ChefHat className="h-8 w-8 text-primary-700" />
+                            </div>
+                            <span className="text-gray-700 font-medium">{getText("kitchen")}</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-gray-50 rounded-lg p-4 border-l-4 border-primary-600">
-                            <Trees className="h-6 w-6 text-primary-600 flex-shrink-0" />
-                            <span className="text-gray-700">{getText("grounds")}</span>
+                        <div className="flex flex-col items-center text-center p-6 bg-cream-50 rounded-xl">
+                            <div className="bg-primary-100 p-4 rounded-full mb-4">
+                                <Trees className="h-8 w-8 text-primary-700" />
+                            </div>
+                            <span className="text-gray-700 font-medium">{getText("grounds")}</span>
                         </div>
                     </div>
                 </div>

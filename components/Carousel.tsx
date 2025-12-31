@@ -106,7 +106,7 @@ export default function Carousel({ lang }: CarouselProps) {
     return (
         <div 
             ref={carouselRef}
-            className="relative w-full h-[60vh] sm:h-[70vh] overflow-hidden"
+            className="relative w-full h-[70vh] sm:h-[80vh] overflow-hidden"
             onTouchStart={onTouchStart}
             onTouchMove={onTouchMove}
             onTouchEnd={onTouchEnd}
@@ -127,23 +127,29 @@ export default function Carousel({ lang }: CarouselProps) {
                             slide.isPortrait && "object-contain"
                         )}
                     />
-                    <div className="absolute inset-0 bg-black/30 flex items-center">
+                    {/* Atmospheric gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 flex items-end pb-20 sm:pb-28">
                         <div className={clsx(
-                            "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full",
+                            "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full",
                             slide.centerCaption ? "text-center" : "text-left"
                         )}>
                             <h1 className={clsx(
-                                "text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg",
-                                slide.isDarker ? "text-gray-200" : "text-white"
-                            )}>
+                                "font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 tracking-wide",
+                                slide.isDarker ? "text-cream-200" : "text-white"
+                            )}
+                            style={{ textShadow: '2px 4px 12px rgba(0,0,0,0.5)' }}
+                            >
                                 {slide.title}
                             </h1>
                             {slide.lead && (
                                 <p className={clsx(
-                                    "text-lg sm:text-xl md:text-2xl mb-6 max-w-3xl drop-shadow-lg",
-                                    slide.isDarker ? "text-gray-300" : "text-white",
+                                    "text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl font-light leading-relaxed",
+                                    slide.isDarker ? "text-cream-300" : "text-cream-100",
                                     slide.centerCaption && "mx-auto"
-                                )}>
+                                )}
+                                style={{ textShadow: '1px 2px 8px rgba(0,0,0,0.5)' }}
+                                >
                                     {slide.lead}
                                 </p>
                             )}
@@ -151,7 +157,7 @@ export default function Carousel({ lang }: CarouselProps) {
                                 <div className={slide.centerCaption ? "flex justify-center" : ""}>
                                     <Link
                                         href={slide.link.href}
-                                        className="btn btn-primary text-lg px-6 py-3"
+                                        className="inline-flex items-center bg-primary-600 text-white px-8 py-4 rounded-md text-lg font-medium hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
                                     >
                                         {slide.link.text}
                                     </Link>
@@ -162,31 +168,31 @@ export default function Carousel({ lang }: CarouselProps) {
                 </div>
             ))}
 
-            {/* Navigation Arrows */}
+            {/* Navigation Arrows - more elegant */}
             <button
                 onClick={prevSlide}
-                className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white p-3 rounded-full transition-all hover:scale-110"
                 aria-label="Previous slide"
             >
                 <ChevronLeft className="h-6 w-6" />
             </button>
             <button
                 onClick={nextSlide}
-                className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white p-3 rounded-full transition-all hover:scale-110"
                 aria-label="Next slide"
             >
                 <ChevronRight className="h-6 w-6" />
             </button>
 
-            {/* Indicators */}
-            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex space-x-2">
+            {/* Indicators - elegant line style */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
                 {slides.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => setActiveIndex(index)}
                         className={clsx(
-                            "h-2 rounded-full transition-all",
-                            index === activeIndex ? "w-8 bg-white" : "w-2 bg-white/50"
+                            "h-1 rounded-full transition-all duration-300",
+                            index === activeIndex ? "w-12 bg-primary-400" : "w-3 bg-white/40 hover:bg-white/60"
                         )}
                         aria-label={`Go to slide ${index + 1}`}
                     />

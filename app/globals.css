@@ -1,16 +1,56 @@
 @import "tailwindcss";
 
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
 @theme {
-  --color-primary-50: #f0f9ff;
-  --color-primary-100: #e0f2fe;
-  --color-primary-200: #bae6fd;
-  --color-primary-300: #7dd3fc;
-  --color-primary-400: #38bdf8;
-  --color-primary-500: #0ea5e9;
-  --color-primary-600: #0284c7;
-  --color-primary-700: #0369a1;
-  --color-primary-800: #075985;
-  --color-primary-900: #0c4a6e;
+  /* Tarn / South of France Color Palette */
+  --color-primary-50: #fdf8f3;
+  --color-primary-100: #f9ede0;
+  --color-primary-200: #f2d9c0;
+  --color-primary-300: #e8be96;
+  --color-primary-400: #db9c69;
+  --color-primary-500: #c4784a;
+  --color-primary-600: #b5623d;
+  --color-primary-700: #964d35;
+  --color-primary-800: #7a4031;
+  --color-primary-900: #64372b;
+  
+  /* Sage/Olive Greens */
+  --color-sage-50: #f6f7f4;
+  --color-sage-100: #e8ebe3;
+  --color-sage-200: #d2d9c8;
+  --color-sage-300: #b3bfa2;
+  --color-sage-400: #94a37c;
+  --color-sage-500: #768860;
+  --color-sage-600: #5c6c4b;
+  --color-sage-700: #49563d;
+  --color-sage-800: #3c4634;
+  --color-sage-900: #343c2e;
+  
+  /* Warm Cream/Stone */
+  --color-cream-50: #fdfcfa;
+  --color-cream-100: #faf7f2;
+  --color-cream-200: #f5efe5;
+  --color-cream-300: #ebe2d3;
+  --color-cream-400: #ddd0bb;
+  --color-cream-500: #c9b89e;
+  
+  /* Warm Teal/Mediterranean */
+  --color-teal-50: #f0fdfb;
+  --color-teal-100: #ccfbf4;
+  --color-teal-200: #99f6ea;
+  --color-teal-300: #5eeadb;
+  --color-teal-400: #2dd4c4;
+  --color-teal-500: #14b8a6;
+  --color-teal-600: #0d9488;
+  --color-teal-700: #0f766e;
+  --color-teal-800: #115e59;
+  --color-teal-900: #134e4a;
+  
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
 }
 
 @layer base {
@@ -20,19 +60,51 @@
   
   body {
     @apply antialiased;
+    font-family: var(--font-body);
+    background-color: var(--color-cream-50);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+  }
+}
+
+@layer utilities {
+  .font-heading {
+    font-family: var(--font-heading);
+  }
+  
+  .font-body {
+    font-family: var(--font-body);
   }
 }
 
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-4 py-2 rounded-md font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+    @apply inline-flex items-center justify-center px-6 py-3 rounded-md font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2;
   }
   
   .btn-primary {
-    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 shadow-md hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply bg-gray-200 text-gray-900 hover:bg-gray-300 focus:ring-gray-500;
+    @apply bg-cream-200 text-primary-800 hover:bg-cream-300 focus:ring-primary-500;
+  }
+  
+  /* Elegant card style */
+  .card {
+    @apply bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden;
+  }
+  
+  /* Decorative line */
+  .divider-ornament {
+    @apply relative text-center my-12;
+  }
+  
+  .divider-ornament::before {
+    content: '❧';
+    @apply text-primary-400 text-2xl;
   }
 }

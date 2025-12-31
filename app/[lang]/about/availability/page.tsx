@@ -27,10 +27,12 @@ export default async function AvailabilityPage({ params }: PageProps) {
     return (
         <>
             <Navbar lang={lang} />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <h1 className="text-4xl font-bold text-gray-900 mb-4">{getText("title")}</h1>
-                <p className="text-xl text-gray-600 mb-12">{getText("lead")}</p>
-                <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div className="text-center mb-16">
+                    <h1 className="font-heading text-4xl sm:text-5xl text-primary-800 mb-4">{getText("title")}</h1>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">{getText("lead")}</p>
+                </div>
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-cream-200">
                     <iframe
                         src="https://calendar.google.com/calendar/embed?src=lamaisondesamis%40gmail.com&ctz=Europe/Paris"
                         className="w-full h-[600px] border-0"

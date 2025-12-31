@@ -11,38 +11,49 @@ export default function Contact({ lang }: ContactProps) {
     };
 
     return (
-        <div id="contact" className="space-y-6">
-            <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-6">
-                {t.heading} <span className="text-gray-500">{t.subheading}</span>
-            </h2>
+        <div id="contact" className="space-y-8">
+            <div>
+                <h2 className="font-heading text-4xl sm:text-5xl text-primary-800 mb-1">
+                    {t.heading}
+                </h2>
+                <p className="font-heading text-2xl text-primary-500 italic">{t.subheading}</p>
+            </div>
             <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                    <Phone className="h-5 w-5 text-primary-600 flex-shrink-0" />
-                    <a href="tel:+33563418732" className="text-lg text-gray-700 hover:text-primary-600 transition-colors">
+                <a href="tel:+33563418732" className="flex items-center space-x-4 p-4 rounded-xl bg-cream-100 hover:bg-cream-200 transition-colors group">
+                    <div className="bg-primary-100 p-3 rounded-full group-hover:bg-primary-200 transition-colors">
+                        <Phone className="h-5 w-5 text-primary-700" />
+                    </div>
+                    <span className="text-lg text-gray-700 group-hover:text-primary-700 transition-colors">
                         +33 5 63 41 87 32
-                    </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                    <Mail className="h-5 w-5 text-primary-600 flex-shrink-0" />
-                    <a 
-                        href="mailto:info@darrach.net?subject=La%20Maison%20des%20Amis%20info%20request"
-                        className="text-lg text-gray-700 hover:text-primary-600 transition-colors"
-                    >
+                    </span>
+                </a>
+                <a 
+                    href="mailto:info@darrach.net?subject=La%20Maison%20des%20Amis%20info%20request"
+                    className="flex items-center space-x-4 p-4 rounded-xl bg-cream-100 hover:bg-cream-200 transition-colors group"
+                >
+                    <div className="bg-primary-100 p-3 rounded-full group-hover:bg-primary-200 transition-colors">
+                        <Mail className="h-5 w-5 text-primary-700" />
+                    </div>
+                    <span className="text-lg text-gray-700 group-hover:text-primary-700 transition-colors">
                         info [at] darrach.net
-                    </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                    <Smartphone className="h-5 w-5 text-primary-600 flex-shrink-0" />
-                    <a href="tel:+33613336533" className="text-lg text-gray-700 hover:text-primary-600 transition-colors">
-                        +33 6 13 33 65 33 (Nadia)
-                    </a>
-                </div>
-                <div className="flex items-center space-x-3">
-                    <Smartphone className="h-5 w-5 text-primary-600 flex-shrink-0" />
-                    <a href="tel:+33618512385" className="text-lg text-gray-700 hover:text-primary-600 transition-colors">
-                        +33 6 18 51 23 85 (Paul)
-                    </a>
-                </div>
+                    </span>
+                </a>
+                <a href="tel:+33613336533" className="flex items-center space-x-4 p-4 rounded-xl bg-cream-100 hover:bg-cream-200 transition-colors group">
+                    <div className="bg-primary-100 p-3 rounded-full group-hover:bg-primary-200 transition-colors">
+                        <Smartphone className="h-5 w-5 text-primary-700" />
+                    </div>
+                    <span className="text-lg text-gray-700 group-hover:text-primary-700 transition-colors">
+                        +33 6 13 33 65 33 <span className="text-primary-600 font-medium">(Nadia)</span>
+                    </span>
+                </a>
+                <a href="tel:+33618512385" className="flex items-center space-x-4 p-4 rounded-xl bg-cream-100 hover:bg-cream-200 transition-colors group">
+                    <div className="bg-primary-100 p-3 rounded-full group-hover:bg-primary-200 transition-colors">
+                        <Smartphone className="h-5 w-5 text-primary-700" />
+                    </div>
+                    <span className="text-lg text-gray-700 group-hover:text-primary-700 transition-colors">
+                        +33 6 18 51 23 85 <span className="text-primary-600 font-medium">(Paul)</span>
+                    </span>
+                </a>
             </div>
         </div>
     );

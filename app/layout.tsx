@@ -23,7 +23,7 @@ export default function RootLayout({
                 <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-57-precomposed.png" />
                 <link rel="shortcut icon" href="/favicon.ico" />
             </head>
-            <body className="bg-white text-gray-900">
+            <body className="bg-cream-50 text-gray-800">
                 {children}
             </body>
         </html>

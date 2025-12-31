@@ -52,51 +52,51 @@ export default async function AboutPage({ params }: PageProps) {
         <>
             <Navbar lang={lang} />
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 {/* Main About Section */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-                    <div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center mb-24">
+                    <div className="rounded-2xl overflow-hidden shadow-xl">
                         <img
                             src="/images/les-martels.jpg"
                             alt="La Maison des Amis - Les Martels"
-                            className="w-full rounded-lg shadow-lg"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                     <div>
-                        <h1 className="text-4xl font-bold text-gray-900 mb-6">{getText("title")}</h1>
-                        <p className="text-xl text-gray-700 mb-4">{getText("welcome")}</p>
-                        <p className="text-lg text-gray-600">{getText("description")}</p>
+                        <h1 className="font-heading text-4xl sm:text-5xl text-primary-800 mb-6">{getText("title")}</h1>
+                        <p className="text-xl text-gray-700 mb-6 leading-relaxed">{getText("welcome")}</p>
+                        <p className="text-lg text-gray-600 leading-relaxed">{getText("description")}</p>
                     </div>
                 </div>
 
                 {/* Contact Section */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-                    <div>
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center mb-24">
+                    <div className="bg-white rounded-2xl p-10 shadow-lg border border-cream-200">
                         <Contact lang={lang} />
                     </div>
-                    <div>
+                    <div className="rounded-2xl overflow-hidden shadow-xl">
                         <img
                             src="/images/paul-and-nadia.jpg"
                             alt="Paul and Nadia"
-                            className="w-full rounded-lg shadow-lg"
+                            className="w-full h-full object-cover"
                         />
                     </div>
                 </div>
 
                 {/* Location Section */}
-                <div className="mb-20">
-                    <h2 className="text-3xl font-semibold text-gray-900 mb-4">{getText("location")}</h2>
-                    <p className="text-lg text-gray-600 mb-6">{getText("locationDesc")}</p>
-                    <div className="rounded-lg overflow-hidden shadow-lg">
-                        <iframe
-                            className="w-full h-96"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92456.85668563456!2d1.7!3d43.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae8d6c39e5c7e7%3A0x406f69c2f3d9450!2s81500%20Giroussens%2C%20France!5e0!3m2!1sen!2sus!4v1704000000000!5m2!1sen!2sus"
-                            title="Location Map"
-                            allowFullScreen
-                            loading="lazy"
-                            name="about-location-map"
-                        />
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-cream-200">
+                    <div className="p-10 lg:p-14">
+                        <h2 className="font-heading text-4xl text-primary-800 mb-4">{getText("location")}</h2>
+                        <p className="text-lg text-gray-600 leading-relaxed">{getText("locationDesc")}</p>
                     </div>
+                    <iframe
+                        className="w-full h-96"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92456.85668563456!2d1.7!3d43.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae8d6c39e5c7e7%3A0x406f69c2f3d9450!2s81500%20Giroussens%2C%20France!5e0!3m2!1sen!2sus!4v1704000000000!5m2!1sen!2sus"
+                        title="Location Map"
+                        allowFullScreen
+                        loading="lazy"
+                        name="about-location-map"
+                    />
                 </div>
             </div>
 

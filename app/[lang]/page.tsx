@@ -108,82 +108,91 @@ export default async function LangHomePage({ params }: PageProps) {
             <Carousel lang={lang} />
 
             {/* Main Content Sections */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 {/* Three Column Feature Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-24">
                     {/* Rates Card */}
-                    <Link href={`${basePath}/rates/`} className="block group text-center">
+                    <Link href={`${basePath}/rates/`} className="block group text-center bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-cream-200">
                         <div className="mb-6 flex justify-center">
-                            <img 
-                                alt="Albi" 
-                                src="/images/albi-med.jpg" 
-                                className="w-32 h-32 rounded-full object-cover shadow-lg group-hover:shadow-xl transition-shadow"
-                            />
+                            <div className="relative">
+                                <img 
+                                    alt="Albi" 
+                                    src="/images/albi-med.jpg" 
+                                    className="w-36 h-36 rounded-full object-cover shadow-lg ring-4 ring-cream-200 group-hover:ring-primary-300 transition-all"
+                                />
+                            </div>
                         </div>
-                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">{getText("rates")}</h2>
-                        <p className="text-gray-600 mb-2">{getText("ratesDesc1")}</p>
-                        <p className="text-gray-600 mb-6">{getText("ratesDesc2")}</p>
-                        <span className="inline-flex items-center text-primary-600 group-hover:text-primary-700 font-medium group-hover:gap-2 gap-1 transition-all">
-                            {getText("more")} <ArrowRight className="h-4 w-4" />
+                        <h2 className="font-heading text-3xl font-semibold text-primary-800 mb-4">{getText("rates")}</h2>
+                        <p className="text-gray-600 mb-2 leading-relaxed">{getText("ratesDesc1")}</p>
+                        <p className="text-gray-600 mb-6 leading-relaxed">{getText("ratesDesc2")}</p>
+                        <span className="inline-flex items-center text-primary-600 group-hover:text-primary-700 font-medium gap-2 transition-all">
+                            {getText("more")} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </span>
                     </Link>
 
                     {/* Guest Book Card */}
-                    <Link href={`${basePath}/guest-book/`} className="block group text-center">
+                    <Link href={`${basePath}/guest-book/`} className="block group text-center bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-cream-200">
                         <div className="mb-6 flex justify-center">
-                            <img 
-                                alt="Dine al fresco" 
-                                src="/images/bella.jpg" 
-                                className="w-32 h-32 rounded-full object-cover shadow-lg group-hover:shadow-xl transition-shadow"
-                            />
+                            <div className="relative">
+                                <img 
+                                    alt="Dine al fresco" 
+                                    src="/images/bella.jpg" 
+                                    className="w-36 h-36 rounded-full object-cover shadow-lg ring-4 ring-cream-200 group-hover:ring-primary-300 transition-all"
+                                />
+                            </div>
                         </div>
-                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">{getText("guestBook")}</h2>
-                        <p className="text-gray-600 mb-2 italic">"{getText("guestQuote")}"</p>
+                        <h2 className="font-heading text-3xl font-semibold text-primary-800 mb-4">{getText("guestBook")}</h2>
+                        <p className="text-gray-600 mb-3 italic leading-relaxed">"{getText("guestQuote")}"</p>
                         <p className="text-gray-600 mb-2">{getText("thanks")}</p>
-                        <p className="text-gray-700 font-medium mb-6">— Nick and Jo and family, England</p>
-                        <span className="inline-flex items-center text-primary-600 group-hover:text-primary-700 font-medium group-hover:gap-2 gap-1 transition-all">
-                            {getText("more")} <ArrowRight className="h-4 w-4" />
+                        <p className="text-primary-700 font-medium mb-6">— Nick and Jo and family, England</p>
+                        <span className="inline-flex items-center text-primary-600 group-hover:text-primary-700 font-medium gap-2 transition-all">
+                            {getText("more")} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </span>
                     </Link>
 
                     {/* About Card */}
-                    <Link href={`${basePath}/about/`} className="block group text-center">
+                    <Link href={`${basePath}/about/`} className="block group text-center bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-cream-200">
                         <div className="mb-6 flex justify-center">
-                            <img 
-                                alt="Les Martels" 
-                                src="/images/les-martels.jpg" 
-                                className="w-32 h-32 rounded-full object-cover shadow-lg group-hover:shadow-xl transition-shadow"
-                            />
+                            <div className="relative">
+                                <img 
+                                    alt="Les Martels" 
+                                    src="/images/les-martels.jpg" 
+                                    className="w-36 h-36 rounded-full object-cover shadow-lg ring-4 ring-cream-200 group-hover:ring-primary-300 transition-all"
+                                />
+                            </div>
                         </div>
-                        <h2 className="text-2xl font-semibold text-gray-900 mb-4">{getText("about")}</h2>
-                        <p className="text-gray-600 mb-6">{getText("aboutDesc")}</p>
-                        <span className="inline-flex items-center text-primary-600 group-hover:text-primary-700 font-medium group-hover:gap-2 gap-1 transition-all">
-                            {getText("more")} <ArrowRight className="h-4 w-4" />
+                        <h2 className="font-heading text-3xl font-semibold text-primary-800 mb-4">{getText("about")}</h2>
+                        <p className="text-gray-600 mb-6 leading-relaxed">{getText("aboutDesc")}</p>
+                        <span className="inline-flex items-center text-primary-600 group-hover:text-primary-700 font-medium gap-2 transition-all">
+                            {getText("more")} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </span>
                     </Link>
                 </div>
 
                 {/* Location Section */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
-                    <div>
-                        <h2 className="text-3xl sm:text-4xl font-light text-gray-900 mb-4">
-                            {getText("location")} <span className="text-gray-500">{getText("closeToPerfect")}</span>
-                        </h2>
-                        <p className="text-lg text-gray-600 mb-6">{getText("locationDesc")}</p>
-                        <div className="flex items-center space-x-2 text-gray-700">
-                            <Home className="h-5 w-5 text-primary-600" />
-                            <span>Les Martels, Giroussens, 81500, France</span>
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-24 border border-cream-200">
+                    <div className="grid grid-cols-1 lg:grid-cols-2">
+                        <div className="p-10 lg:p-14 flex flex-col justify-center">
+                            <h2 className="font-heading text-4xl sm:text-5xl text-primary-800 mb-2">
+                                {getText("location")}
+                            </h2>
+                            <p className="font-heading text-2xl text-primary-500 italic mb-6">{getText("closeToPerfect")}</p>
+                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">{getText("locationDesc")}</p>
+                            <div className="flex items-center space-x-3 text-gray-700 bg-cream-100 rounded-lg px-4 py-3 w-fit">
+                                <Home className="h-5 w-5 text-primary-600" />
+                                <span className="font-medium">Les Martels, Giroussens, 81500, France</span>
+                            </div>
                         </div>
-                    </div>
-                    <div className="rounded-lg overflow-hidden shadow-lg">
-                        <iframe
-                            className="w-full h-96"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92456.85668563456!2d1.7!3d43.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae8d6c39e5c7e7%3A0x406f69c2f3d9450!2s81500%20Giroussens%2C%20France!5e0!3m2!1sen!2sus!4v1704000000000!5m2!1sen!2sus"
-                            title="Location Map"
-                            allowFullScreen
-                            loading="lazy"
-                            name="location-map"
-                        />
+                        <div className="h-80 lg:h-auto">
+                            <iframe
+                                className="w-full h-full min-h-80"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92456.85668563456!2d1.7!3d43.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae8d6c39e5c7e7%3A0x406f69c2f3d9450!2s81500%20Giroussens%2C%20France!5e0!3m2!1sen!2sus!4v1704000000000!5m2!1sen!2sus"
+                                title="Location Map"
+                                allowFullScreen
+                                loading="lazy"
+                                name="location-map"
+                            />
+                        </div>
                     </div>
                 </div>
 
@@ -193,12 +202,12 @@ export default async function LangHomePage({ params }: PageProps) {
                         <img
                             alt="Contact us"
                             src="/images/paul-and-nadia.jpg"
-                            className="w-full rounded-lg shadow-lg"
+                            className="w-full rounded-2xl shadow-xl"
                         />
                     </div>
-                    <div className="order-1 lg:order-2">
+                    <div className="order-1 lg:order-2 bg-white rounded-2xl p-10 shadow-lg border border-cream-200">
                         <Contact lang={lang} />
-                        <div className="mt-8">
+                        <div className="mt-10 pt-8 border-t border-cream-200">
                             <WeatherWidget />
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Home } from "lucide-react";
+import { Home, MapPin, Grape } from "lucide-react";
 
 interface FooterProps {
     lang: string;
@@ -27,15 +27,22 @@ export default function Footer({ lang }: FooterProps) {
     };
 
     return (
-        <footer className="bg-gray-50 border-t border-gray-200 mt-16">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <footer className="bg-gradient-to-b from-cream-100 to-cream-200 border-t-4 border-primary-400 mt-20">
+            {/* Decorative element */}
+            <div className="flex justify-center -mt-5">
+                <div className="bg-cream-100 px-6 py-2 rounded-full">
+                    <Grape className="h-6 w-6 text-primary-500" />
+                </div>
+            </div>
+            
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
                     {/* About Section */}
                     <div>
-                        <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                        <h4 className="font-heading text-lg font-semibold text-primary-800 mb-5">
                             {t.about}
                         </h4>
-                        <ul className="space-y-2">
+                        <ul className="space-y-3">
                             <li>
                                 <Link href={`${basePath}/guest-book/`} className="text-gray-600 hover:text-primary-600 transition-colors">
                                     {t.guestBook}
@@ -61,10 +68,10 @@ export default function Footer({ lang }: FooterProps) {
 
                     {/* Booking Section */}
                     <div>
-                        <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                        <h4 className="font-heading text-lg font-semibold text-primary-800 mb-5">
                             {t.booking}
                         </h4>
-                        <ul className="space-y-2">
+                        <ul className="space-y-3">
                             <li>
                                 <Link href={`${basePath}/about/availability/`} className="text-gray-600 hover:text-primary-600 transition-colors">
                                     {t.availability}
@@ -85,10 +92,10 @@ export default function Footer({ lang }: FooterProps) {
 
                     {/* Region Section */}
                     <div>
-                        <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                        <h4 className="font-heading text-lg font-semibold text-primary-800 mb-5">
                             {t.region}
                         </h4>
-                        <ul className="space-y-2">
+                        <ul className="space-y-3">
                             <li>
                                 <Link href={`${basePath}/about/markets/`} className="text-gray-600 hover:text-primary-600 transition-colors">
                                     {t.markets}
@@ -109,37 +116,38 @@ export default function Footer({ lang }: FooterProps) {
 
                     {/* Reviews Section */}
                     <div>
-                        <h4 className="text-sm font-semibold text-gray-900 uppercase tracking-wider mb-4">
+                        <h4 className="font-heading text-lg font-semibold text-primary-800 mb-5">
                             {t.reviews}
                         </h4>
                         <a
                             href="https://www.tripadvisor.com/Hotel_Review-g1940548-d1907794-Reviews-La_Maison_des_Amis-Giroussens_Tarn_Midi_Pyrenees.html"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex items-center space-x-2 text-gray-600 hover:text-primary-600 transition-colors"
+                            className="inline-flex items-center space-x-3 bg-white px-4 py-3 rounded-lg shadow-sm hover:shadow-md transition-all text-gray-700 hover:text-primary-600"
                         >
                             <img
                                 src="/images/tripadvisor.png"
                                 alt="TripAdvisor"
                                 className="w-6 h-6"
                             />
-                            <span>TripAdvisor</span>
+                            <span className="font-medium">TripAdvisor</span>
                         </a>
                     </div>
                 </div>
 
-                <div className="border-t border-gray-200 pt-8">
+                <div className="border-t border-cream-400 pt-8">
                     <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
                         <Link
                             href={basePath || "/"}
-                            className="flex items-center space-x-2 text-gray-600 hover:text-primary-600 transition-colors"
+                            className="flex items-center space-x-3 text-primary-700 hover:text-primary-600 transition-colors"
                         >
                             <Home className="h-5 w-5" />
-                            <span className="font-medium">La Maison des Amis - In the Heart of the Tarn</span>
+                            <span className="font-heading text-xl font-semibold">La Maison des Amis</span>
                         </Link>
-                        <p className="text-sm text-gray-500">
-                            Holiday rental villa with pool, wifi. 30 mins Toulouse, Tarn, France.
-                        </p>
+                        <div className="flex items-center space-x-2 text-gray-600">
+                            <MapPin className="h-4 w-4 text-primary-500" />
+                            <span className="text-sm">30 mins from Toulouse · Tarn, France</span>
+                        </div>
                     </div>
                 </div>
             </div>
