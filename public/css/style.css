@@ -1,0 +1,587 @@
+a:-webkit-any-link{
+text-decoration:none !important;
+}
+
+.container {
+	max-width: 1400px;
+}
+
+img.shadow {
+	box-shadow: 0 5px 10px grey;
+
+}
+
+img.img-circle {
+	width: 140px;
+}
+
+iframe.forecast {
+	height: 245px;
+}
+
+/* CUSTOMIZE THE NAVBAR
+	-------------------------------------------------- */
+	
+.nav-flags img {
+	margin-top: 10px;
+}
+.navbar-brand {
+	margin-left: 20px;
+}
+.navbar-brand .fa {
+	color: lightskyblue;
+	margin-left: 20px;
+} 
+
+.btn.btn-default.dropdown-toggle {
+	padding: 0;
+	border: 0;
+	background-color: #F8F8F8;
+}
+
+.selected {
+	padding-top: 5px;
+	border-top: 2px solid grey;
+	margin-bottom: 5px;
+}
+}
+.container .navbar-collapse {
+	margin-right: 0;
+}
+
+.container .navbar-toggle {
+	margin-right: 40px;
+}
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+/* CUSTOMIZE PAGE CLASSES
+	-------------------------------------------------- */
+.about {
+	margin-top: 100px;
+}
+
+.rates {
+	margin-top: 100px;
+}
+
+.restaurants {
+	margin-top: 100px;
+}
+
+.guest-book {
+	margin-top: 100px;
+}
+
+.markets {
+	margin-top: 100px;
+}
+
+.links {
+	margin-top: 100px;
+}
+   		
+/* CUSTOMIZE THE CAROUSEL
+	-------------------------------------------------- */
+.carousel {
+	margin-bottom: 50px;
+}
+
+.carousel .container {
+	margin-top: 90px;
+	position: relative;
+	z-index: 9;
+}
+
+.carousel-control {
+	height: 52px;
+	width: 50px;
+	margin-top: 30%;
+	margin-left: 5%;
+	margin-right: 5%;
+	font-size: 120px;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+	background-color:rgba(0, 0, 0, 0.5);
+	border: 0;
+	z-index: 10;
+}
+
+.carousel img.portrait {
+	width: auto;
+	left:0;
+	right:0;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.carousel img {
+	position: absolute;
+	display: block;
+	width: 100%;
+	height: auto;
+	top: 0;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+.carousel .container .fixed-width img {
+}
+
+.carousel-caption {
+	background-color: transparent;
+	display: inline-block;
+	margin-left: 6%;
+	margin-top: 5%;
+	max-width: 650px;
+	padding: 0 20px;
+	position: static;
+	text-align: left;
+}
+
+.carousel-center-caption {
+	background-color: transparent;
+	display: inline-block;
+	margin-left: 20px;
+	margin-top: 50px;
+	max-width: 600px;
+	padding-left: 25%;
+	position: static;
+	text-align: left;
+}
+
+.carousel-caption h1, .carousel-caption .lead, .carousel-center-caption h1, .carousel-center-caption .lead {
+	margin: 0;
+	font-size: 2em;
+	text-shadow: 0 1px 1px rgba(0, 0, 0, .4);
+}
+
+.carousel-caption h1.site-desc {
+	font-weight: 300;
+}
+.carousel-caption p, .carousel-caption .lead, .carousel-center-caption p, .carousel-center-caption .lead {
+    line-height: 1.25;
+}
+
+.carousel-caption .btn, .carousel-center-caption .btn {
+	margin-top: 10px;
+	margin-left: 10px;
+	float: right;
+}
+
+.accordion .well p {
+	color: white;
+}
+.accordion .well {
+	border: 0;
+	background-color: transparent;
+}
+.accordion .icon-info-sign {
+	color: white;
+	font-size: 30px;
+}
+
+.darker h1 {
+	color: #ddd;
+}
+
+
+
+/* FOOTER CONTENT
+	-------------------------------------------------- */
+	 
+.footer-menu {
+	list-style-type: none;
+	margin-left: 0px;
+}
+.footer-brand a, p.location {
+	color: darkgrey;
+}   
+
+.footer-brand a:hover {
+	text-decoration: none;
+}   
+
+.footer-brand .fa {
+	color: lightskyblue;
+	margin-left: 20px;
+}   
+
+.footer-brand .fa:hover {
+	color: darkgrey;
+}  
+ 
+.reviews a {
+	margin: auto;
+	display: block;
+	width: 100%;
+}    		
+
+.reviews .facebook {
+	margin-left: 0;
+	margin-top: 5px;
+	padding-left: 0;
+}
+
+.tripadvisor {
+	height: 30px;
+}
+
+.homeaway  {
+	min-width: 120px;
+	max-width: 150px;
+}
+
+
+/* Featurettes
+------------------------- */
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+.featurette {
+  padding-top: 120px; /* Vertically center images part 1: add padding above and below text. */
+  overflow: hidden; /* Vertically center images part 2: clear their floats. */
+}
+
+.featurette-image {
+  margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */
+}
+
+.marketing h2 {
+	font-weight: normal;
+}
+
+.map {
+	box-shadow: 0 2px 10px grey;
+	width: 45%;
+	height: 400px;
+}
+
+/* Give some space on the sides of the floated elements so text doesn't run right into it. */
+.featurette-image.pull-left {
+  margin-right: 40px;
+}
+.featurette-image.pull-right {
+  margin-left: 40px;
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-size: 50px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+
+/* ABOUT CONTENT
+	-------------------------------------------------- */
+
+.about img {
+	margin-bottom: 20px;
+}
+
+.links img {
+	margin-bottom: 10px;
+}    		
+ 
+
+
+.quote-box {
+    border-radius: 10px;
+
+		border: 1px solid #e6e6e6;
+		padding: 10px;
+		margin-bottom: 10px;
+		width: 100%;
+	}
+	.quote-box q {
+		display: block;
+		font-size: 19px;
+		line-height: 30px;
+		margin: 0 0 0 30px
+	}
+	.quote-box .quote-center {
+		text-align: center;
+		position: absolute;
+		margin: -12px 0 0 -10px;
+		width: 33px;
+		height: 28px
+	}
+	.quote-box .quote-left {
+		position: absolute;
+		margin: -12px 0 0 -10px;
+		width: 33px;
+		height: 28px
+	}
+	.quote-box .quote-right {
+		position: absolute;
+		margin: 4px -10px 0 10px;
+		width: 33px;
+		height: 28px
+	}
+	.quote-arrow {
+		display: block;
+		margin: -1px 0 0 5px;
+		width: 99px;
+		height: 13px
+	}
+
+blockquote{
+  display:block;
+  padding: 15px 20px 35px 45px;
+  margin: 0 0 20px;
+  position: relative;
+  
+  /*Font*/
+  font-size: 1em;
+  line-height: 1.2;
+  color: #666;
+  
+  /*Borders - (Optional)*/
+  border-left: 15px solid lightblue;
+  border-right: 2px solid lightblue;
+  
+  /*Box Shadow - (Optional)*/
+  box-shadow: 2px 2px 15px #ccc;
+}
+
+blockquote::before{
+  content: "\201C"; /*Unicode for Left Double Quote*/
+  
+  /*Font*/
+  font-size: 60px;
+  font-weight: bold;
+  color: #999;
+  
+  /*Positioning*/
+  position: absolute;
+  left: 10px;
+  top:5px;
+}
+
+blockquote::after{
+  /*Reset to make sure*/
+  content: "";
+}
+
+blockquote a {
+  text-decoration: none;
+  background: #eee;
+  cursor: pointer;
+  padding: 0 3px;
+  color: #c76c0c;
+}
+
+blockquote a:hover {
+ color: grey;
+}
+
+blockquote em {
+  font-style: italic;
+}
+
+cite {
+	float: right;
+	
+}
+
+
+
+/* Links CONTENT
+	-------------------------------------------------- */
+.link-box {
+	display: block;
+	border: 1px solid #e6e6e6;
+	padding: 10px 20px 5px 20px;
+	border-radius: 2px;
+	text-align: justify;
+	margin-bottom: 10px;
+}
+
+.link-box a img {
+	width: 100%;
+}
+
+/* new */
+a .link-box img {
+	width: 100%;
+}
+
+
+a .link-box p {
+	color: black;
+}
+a .link-box:hover p {
+	text-decoration: none;
+}
+.link-box .title {
+	font-weight: bold;
+}
+
+p.photo-title {
+	margin-top: 5px;
+	text-align: center;
+}
+
+.facebook {
+	display: block;
+	margin-left:auto;
+	margin-right:auto;
+	padding-left: 20px;
+	width: 100px;
+	height: 30px;
+}
+
+iframe {
+	border: none; 
+	overflow: hidden; 
+	width: 100%; 
+	height: 80px;
+
+}
+
+.calendar iframe {
+	width: 520px;
+	height: 770px;
+}
+
+.calendar a {
+	display: block;
+	margin-left: 170px;
+	margin-top: -30px;
+}
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+
+@media (max-width: 992px) {
+	
+	body {
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	.carousel .container {
+		margin-top: 50px;
+
+	}
+	.container.navbar-wrapper {
+		margin-bottom: 0;
+		width: auto;
+	}
+	
+	.navbar-inner {
+		border-radius: 0;
+		margin: -20px 0;
+	}
+
+	.carousel-caption {
+		padding-top: 70px;
+	}
+
+	.featurette {
+		height: auto;
+		padding: 0;
+		text-align: center;
+	}
+	
+	.featurette-text, .featurette-image.pull-left, .featurette-image.pull-right {
+		display: block;
+		max-width: 80%;
+		width: 80%;
+		float: none !important;
+		margin: 20px auto 20px;
+	}
+	
+	p.photo-title {
+		text-align: left;
+		margin-left: 10px;
+	}
+	
+	
+	.about img {
+	    display: block;
+	    width:  100%;
+		margin: 0 auto 20px;
+	}
+	
+	.about p {
+		text-align: justify;
+	}	
+	
+	.contact h2, .contact p {
+		text-align: center;
+	}	
+	
+}
+
+@media (max-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+.carousel-caption {
+	padding-top: 0px;
+	margin-top: 8%;
+	margin-left: 10%;
+	max-width: 80%;
+}
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+    margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+  }
+  
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+  }
+
+
+
+.carousel-center-caption {
+
+	margin-left: 20px;
+	max-width: 400px;
+	}
+	
+	.carousel-caption h1, .carousel-caption h1.site-desc, .carousel-caption .lead, .carousel-center-caption h1, .carousel-center-caption .lead {
+	line-height: 1.25;
+	
+		font-size: 1.3em;
+	}
+	p.location {
+		display: none;
+	}
+}
+
+
+@media (max-width: 480px) {
+.carousel-center-caption {
+	margin-top: 5%;
+	max-width: 250px;
+	}
+.btn {
+	display: none;
+}	
+
+}
