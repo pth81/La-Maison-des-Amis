@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export function generateStaticParams() {
-    return [{ lang: "fr" }, { lang: "es" }, { lang: "cat" }];
+    return [{ lang: "en" }, { lang: "fr" }, { lang: "es" }, { lang: "cat" }];
 }
 
 interface PageProps {

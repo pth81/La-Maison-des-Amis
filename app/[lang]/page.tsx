@@ -3,10 +3,12 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Carousel from "@/components/Carousel";
 import Contact from "@/components/Contact";
+import WeatherWidget from "@/components/WeatherWidget";
 
 // Generate static params for all languages
 export function generateStaticParams() {
     return [
+        { lang: "en" },
         { lang: "fr" },
         { lang: "es" },
         { lang: "cat" },
@@ -176,6 +178,7 @@ export default async function LangHomePage({ params }: PageProps) {
 
                 <hr className="featurette-divider" />
 
+
                 <div className="featurette">
                     <img
                         alt="Contact us"
@@ -185,11 +188,7 @@ export default async function LangHomePage({ params }: PageProps) {
                     <Contact lang={lang} />
                     <hr className="featurette-divider" />
                     <p className="lead">
-                        <iframe
-                            className="forecast"
-                            src="https://forecast.io/embed/#lat=43.7631&lon=1.77693&name=Giroussens&color=#0088cc&units=uk"
-                            title="Weather Forecast"
-                        />
+                        <WeatherWidget />
                     </p>
                 </div>
             </div>

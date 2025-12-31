@@ -3,7 +3,7 @@ import Footer from "@/components/Footer";
 import Contact from "@/components/Contact";
 
 export function generateStaticParams() {
-    return [{ lang: "fr" }, { lang: "es" }, { lang: "cat" }];
+    return [{ lang: "en" }, { lang: "fr" }, { lang: "es" }, { lang: "cat" }];
 }
 
 interface PageProps {

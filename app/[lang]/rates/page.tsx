@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export function generateStaticParams() {
-    return [{ lang: "fr" }, { lang: "es" }, { lang: "cat" }];
+    return [{ lang: "en" }, { lang: "fr" }, { lang: "es" }, { lang: "cat" }];
 }
 
 interface PageProps {
@@ -81,12 +81,12 @@ export default async function RatesPage({ params }: PageProps) {
                 <div className="row">
                     <div className="col-md-12">
                         <h3>{getText("included")}</h3>
-                        <ul>
-                            <li>Pool & tennis</li>
-                            <li>WiFi</li>
-                            <li>Bed linen & towels</li>
-                            <li>Fully equipped kitchen</li>
-                            <li>5 acres of grounds</li>
+                        <ul className="included-list">
+                            <li><i className="fa fa-tint"></i> Pool & tennis</li>
+                            <li><i className="fa fa-wifi"></i> WiFi</li>
+                            <li><i className="fa fa-bed"></i> Bed linen & towels</li>
+                            <li><i className="fa fa-cutlery"></i> Fully equipped kitchen</li>
+                            <li><i className="fa fa-tree"></i> 5 acres of grounds</li>
                         </ul>
                     </div>
                 </div>

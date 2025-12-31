@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Script from "next/script";
 
 // Define supported languages
 export function generateStaticParams() {
@@ -43,39 +42,7 @@ export default async function LangLayout({
     children: React.ReactNode;
     params: Promise<{ lang: string }>;
 }) {
-    const { lang } = await params;
-
-    return (
-        <html lang={lang}>
-            <head>
-                {/* Bootstrap 3 */}
-                <link
-                    href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"
-                    rel="stylesheet"
-                />
-                {/* Font Awesome */}
-                <link
-                    href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
-                    rel="stylesheet"
-                />
-                {/* Custom CSS */}
-                <link href="/css/style.css" rel="stylesheet" />
-                <link href="/css/scrolling-nav.css" rel="stylesheet" />
-            </head>
-            <body>
-                {children}
-
-                {/* jQuery */}
-                <Script
-                    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"
-                    strategy="beforeInteractive"
-                />
-                {/* Bootstrap JS */}
-                <Script
-                    src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
-                    strategy="afterInteractive"
-                />
-            </body>
-        </html>
-    );
+    // Note: html, head, and body tags are provided by the root layout (app/layout.tsx)
+    // Nested layouts should not include these tags to avoid hydration errors
+    return <>{children}</>;
 }

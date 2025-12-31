@@ -75,11 +75,6 @@ export default function Footer({ lang }: FooterProps) {
                                 TripAdvisor
                             </a>
                         </div>
-                        <div className="homeaway">
-                            <a href="https://www.vrbo.com/6609702" target="_blank" rel="noopener noreferrer">
-                                Vrbo
-                            </a>
-                        </div>
                     </div>
                 </div>
                 <hr />

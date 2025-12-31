@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 export function generateStaticParams() {
-    return [{ lang: "fr" }, { lang: "es" }, { lang: "cat" }];
+    return [{ lang: "en" }, { lang: "fr" }, { lang: "es" }, { lang: "cat" }];
 }
 
 interface PageProps {
@@ -45,11 +45,15 @@ export default async function LinksPage({ params }: PageProps) {
 
                 <div className="row">
                     {links.map((link, index) => (
-                        <div key={index} className="col-md-3">
+                        <div key={index} className="col-md-3 col-sm-6">
                             <a href={link.url} target="_blank" rel="noopener noreferrer">
                                 <div className="link-box">
-                                    <img src={link.image} alt={link.title} />
-                                    <p className="title">{link.title}</p>
+                                    <div className="image-container">
+                                        <img src={link.image} alt={link.title} />
+                                    </div>
+                                    <div className="content">
+                                        <p className="title">{link.title}</p>
+                                    </div>
                                 </div>
                             </a>
                         </div>

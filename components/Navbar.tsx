@@ -10,8 +10,8 @@ interface NavbarProps {
 export default function Navbar({ lang }: NavbarProps) {
     const pathname = usePathname();
 
-    // Determine base path for links
-    const basePath = lang === "en" ? "" : `/${lang}`;
+    // Determine base path for links - now all languages use /[lang] prefix
+    const basePath = `/${lang}`;
 
     // Get language flag image
     const getFlagImage = () => {
@@ -34,14 +34,11 @@ export default function Navbar({ lang }: NavbarProps) {
 
     // Map current path to other languages
     const switchLang = (targetLang: string) => {
-        // Remove current lang prefix if any
-        let path = pathname.replace(/^\/(fr|es|cat)/, "");
+        // Remove current lang prefix if any (en, fr, es, cat)
+        let path = pathname.replace(/^\/(en|fr|es|cat)/, "");
         if (!path) path = "/";
 
-        if (targetLang === "en") {
-            return path;
-        }
-        return `/${targetLang}${path}`;
+        return `/${targetLang}${path === "/" ? "" : path}`;
     };
 
     return (
@@ -67,18 +64,18 @@ export default function Navbar({ lang }: NavbarProps) {
                     </div>
 
                     <div className="collapse navbar-collapse navbar-ex1-collapse pull-right">
-                        <ul className="nav navbar-nav">
-                            <li></li>
-                            <li>
-                                <div className="dropdown">
+                        <ul className="nav navbar-nav" style={{ display: "flex", alignItems: "center" }}>
+                            <li style={{ display: "flex", alignItems: "center" }}>
+                                <div className="dropdown" style={{ display: "flex", alignItems: "center" }}>
                                     <button
                                         className="btn btn-default dropdown-toggle"
                                         type="button"
                                         id="langMenu"
                                         data-toggle="dropdown"
+                                        style={{ display: "flex", alignItems: "center", height: "auto", padding: "10px 12px" }}
                                     >
-                                        <img src={getFlagImage()} alt="" title={getFlagTitle()} />
-                                        <span className="caret"></span>
+                                        <img src={getFlagImage()} alt="" title={getFlagTitle()} style={{ verticalAlign: "middle" }} />
+                                        <span className="caret" style={{ marginLeft: "5px" }}></span>
                                     </button>
                                     <ul className="dropdown-menu" role="menu" aria-labelledby="langMenu">
                                         <li>
