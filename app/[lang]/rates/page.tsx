@@ -29,6 +29,13 @@ export default async function RatesPage({ params }: PageProps) {
         week: { en: "Week", fr: "Semaine", es: "Semana", cat: "Setmana" },
         from: { en: "From", fr: "À partir de", es: "Desde", cat: "Des de" },
         included: { en: "What's Included", fr: "Ce qui est inclus", es: "Qué está incluido", cat: "Què està inclòs" },
+        poolTennis: { en: "Pool & tennis", fr: "Piscine et tennis", es: "Piscina y tenis", cat: "Piscina i tennis" },
+        wifi: { en: "WiFi", fr: "WiFi", es: "WiFi", cat: "WiFi" },
+        bedLinen: { en: "Bed linen & towels", fr: "Linge de lit et serviettes", es: "Ropa de cama y toallas", cat: "Roba de llit i tovalloles" },
+        kitchen: { en: "Fully equipped kitchen", fr: "Cuisine entièrement équipée", es: "Cocina totalmente equipada", cat: "Cuina totalment equipada" },
+        grounds: { en: "5 acres of grounds", fr: "2 hectares de terrain", es: "2 hectáreas de terreno", cat: "2 hectàrees de terreny" },
+        july: { en: "July", fr: "Juillet", es: "Julio", cat: "Juliol" },
+        august: { en: "August", fr: "Août", es: "Agosto", cat: "Agost" },
     };
 
     const getText = (key: string) => t[key]?.[lang] || t[key]?.en || "";
@@ -56,8 +63,8 @@ export default async function RatesPage({ params }: PageProps) {
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr><td>July</td><td>€1,500</td></tr>
-                                <tr><td>August</td><td>€1,750</td></tr>
+                                <tr><td>{getText("july")}</td><td>€1,500</td></tr>
+                                <tr><td>{getText("august")}</td><td>€1,750</td></tr>
                             </tbody>
                         </table>
                     </div>
@@ -82,11 +89,11 @@ export default async function RatesPage({ params }: PageProps) {
                     <div className="col-md-12">
                         <h3>{getText("included")}</h3>
                         <ul className="included-list">
-                            <li><i className="fa fa-tint"></i> Pool & tennis</li>
-                            <li><i className="fa fa-wifi"></i> WiFi</li>
-                            <li><i className="fa fa-bed"></i> Bed linen & towels</li>
-                            <li><i className="fa fa-cutlery"></i> Fully equipped kitchen</li>
-                            <li><i className="fa fa-tree"></i> 5 acres of grounds</li>
+                            <li><i className="fa fa-tint"></i> {getText("poolTennis")}</li>
+                            <li><i className="fa fa-wifi"></i> {getText("wifi")}</li>
+                            <li><i className="fa fa-bed"></i> {getText("bedLinen")}</li>
+                            <li><i className="fa fa-cutlery"></i> {getText("kitchen")}</li>
+                            <li><i className="fa fa-tree"></i> {getText("grounds")}</li>
                         </ul>
                     </div>
                 </div>
