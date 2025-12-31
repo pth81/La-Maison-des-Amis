@@ -117,7 +117,7 @@ export default function HomePage() {
                     <p className="lead">
                         <iframe
                             className="forecast"
-                            src="https://forecast.io/embed/#lat=43.7631&lon=1.77693&name=Giroussens&color=#0088cc&units=uk"
+                            src="https://embed.windy.com/embed2.html?lat=43.7631&lon=1.77693&zoom=8&level=surface&overlay=temp&menu=&message=&marker=true&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=43.7631&detailLon=1.77693&metricWind=km%2Fh&metricTemp=%C2%B0C"
                             title="Weather Forecast"
                         />
                     </p>

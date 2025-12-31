@@ -60,28 +60,24 @@ export default function Footer({ lang }: FooterProps) {
                     </div>
                     <div className="reviews col-xs-4 col-sm-2 col-md-2 col-xs-offset-5 col-sm-offset-1 col-md-offset-1">
                         <h4>{t.reviews}</h4>
-                        <div className="facebook">
-                            <iframe
-                                src="https://www.facebook.com/plugins/like.php?href=http://www.facebook.com/maisondesamis&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=80"
-                                title="Facebook Like"
-                            />
-                        </div>
-                        <div className="tripadvisor">
+                        <div className="tripadvisor" style={{ marginBottom: "10px" }}>
                             <a
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 href="https://www.tripadvisor.com/Hotel_Review-g1940548-d1907794-Reviews-La_Maison_des_Amis-Giroussens_Tarn_Midi_Pyrenees.html"
+                                style={{ display: "flex", alignItems: "center", gap: "8px" }}
                             >
                                 <img
                                     src="/images/tripadvisor.png"
                                     alt="TripAdvisor"
                                     style={{ width: "24px", height: "24px" }}
                                 />
+                                TripAdvisor
                             </a>
                         </div>
                         <div className="homeaway">
                             <a href="https://www.vrbo.com/6609702" target="_blank" rel="noopener noreferrer">
-                                View on Vrbo
+                                Vrbo
                             </a>
                         </div>
                     </div>

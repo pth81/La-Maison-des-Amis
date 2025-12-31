@@ -199,6 +199,7 @@ iframe.forecast {
 .footer-menu {
 	list-style-type: none;
 	margin-left: 0px;
+	padding-left: 0;
 }
 .footer-brand a, p.location {
 	color: darkgrey;

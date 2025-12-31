@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 
 // Define supported languages
 export function generateStaticParams() {
@@ -61,7 +62,20 @@ export default async function LangLayout({
                 <link href="/css/style.css" rel="stylesheet" />
                 <link href="/css/scrolling-nav.css" rel="stylesheet" />
             </head>
-            <body>{children}</body>
+            <body>
+                {children}
+
+                {/* jQuery */}
+                <Script
+                    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.js"
+                    strategy="beforeInteractive"
+                />
+                {/* Bootstrap JS */}
+                <Script
+                    src="https://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
+                    strategy="afterInteractive"
+                />
+            </body>
         </html>
     );
 }
