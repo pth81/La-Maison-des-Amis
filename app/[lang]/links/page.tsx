@@ -29,6 +29,7 @@ export default async function LinksPage({ params }: PageProps) {
         { title: "Les Jardins des Martels", description: "Our neighbouring botanical gardens - a must-visit!", url: "https://www.jardinsdesmartels.com", image: "/images/les-jardins.jpg" },
         { title: "Albi Tourism", description: "UNESCO World Heritage city just 30 minutes away", url: "https://www.albi-tourisme.fr", image: "/images/albi-cathedral-small.jpg" },
         { title: "Tarn Tourism", description: "Discover the beautiful Tarn region", url: "https://www.tourisme-tarn.com", image: "/images/tourism-tarn.jpg" },
+        { title: "Gaillac Wine", description: "Wine tastings in one of France's oldest wine regions", url: "https://www.vins-gaillac.com", image: "/images/gaillac-vineyards.jpg" },
     ];
 
     return (
