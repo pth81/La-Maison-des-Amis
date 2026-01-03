@@ -1,0 +1,495 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "redirects": [
+        {
+            "source": "/availability",
+            "destination": "/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/availability/",
+            "destination": "/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/facilities",
+            "destination": "/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/facilities/",
+            "destination": "/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/markets",
+            "destination": "/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/markets/",
+            "destination": "/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/photos",
+            "destination": "/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/photos/",
+            "destination": "/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/restaurants",
+            "destination": "/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/restaurants/",
+            "destination": "/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/towns",
+            "destination": "/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/towns/",
+            "destination": "/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/availability",
+            "destination": "/fr/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/availability/",
+            "destination": "/fr/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/facilities",
+            "destination": "/fr/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/facilities/",
+            "destination": "/fr/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/markets",
+            "destination": "/fr/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/markets/",
+            "destination": "/fr/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/photos",
+            "destination": "/fr/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/photos/",
+            "destination": "/fr/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/restaurants",
+            "destination": "/fr/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/restaurants/",
+            "destination": "/fr/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/towns",
+            "destination": "/fr/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/towns/",
+            "destination": "/fr/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/es/availability",
+            "destination": "/es/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/es/availability/",
+            "destination": "/es/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/es/facilities",
+            "destination": "/es/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/es/facilities/",
+            "destination": "/es/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/es/markets",
+            "destination": "/es/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/es/markets/",
+            "destination": "/es/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/es/photos",
+            "destination": "/es/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/es/photos/",
+            "destination": "/es/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/es/restaurants",
+            "destination": "/es/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/es/restaurants/",
+            "destination": "/es/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/es/towns",
+            "destination": "/es/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/es/towns/",
+            "destination": "/es/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/availability",
+            "destination": "/cat/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/availability/",
+            "destination": "/cat/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/facilities",
+            "destination": "/cat/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/facilities/",
+            "destination": "/cat/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/markets",
+            "destination": "/cat/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/markets/",
+            "destination": "/cat/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/photos",
+            "destination": "/cat/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/photos/",
+            "destination": "/cat/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/restaurants",
+            "destination": "/cat/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/restaurants/",
+            "destination": "/cat/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/towns",
+            "destination": "/cat/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/towns/",
+            "destination": "/cat/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/eng/:path*",
+            "destination": "/:path*",
+            "permanent": true
+        },
+        {
+            "source": "/fr/others.html",
+            "destination": "/fr/",
+            "permanent": true
+        },
+        {
+            "source": "/es/others.html",
+            "destination": "/es/",
+            "permanent": true
+        },
+        {
+            "source": "/eng/others.html",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/exterior.html",
+            "destination": "/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/interior.html",
+            "destination": "/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/exterior.html",
+            "destination": "/fr/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/interior.html",
+            "destination": "/fr/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/eng/chambres.html",
+            "destination": "/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/chambres.html",
+            "destination": "/fr/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/eng/toulouse.html",
+            "destination": "/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/eng/gaillac.html",
+            "destination": "/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/eng/albi.html",
+            "destination": "/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/eng/lavaur.html",
+            "destination": "/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/toulouse.html",
+            "destination": "/fr/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/gaillac.html",
+            "destination": "/fr/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/albi.html",
+            "destination": "/fr/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/lavaur.html",
+            "destination": "/fr/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/index.php",
+            "destination": "/",
+            "permanent": true
+        },
+        {
+            "source": "/about/index.php",
+            "destination": "/about/",
+            "permanent": true
+        },
+        {
+            "source": "/about/availability.php",
+            "destination": "/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/about/facilities.php",
+            "destination": "/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/about/markets.php",
+            "destination": "/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/about/photos.php",
+            "destination": "/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/about/restaurants.php",
+            "destination": "/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/about/towns.php",
+            "destination": "/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/rates/index.php",
+            "destination": "/rates/",
+            "permanent": true
+        },
+        {
+            "source": "/guest-book/index.php",
+            "destination": "/guest-book/",
+            "permanent": true
+        },
+        {
+            "source": "/links/index.php",
+            "destination": "/links/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/index.php",
+            "destination": "/fr/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/about/availability.php",
+            "destination": "/fr/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/about/facilities.php",
+            "destination": "/fr/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/about/markets.php",
+            "destination": "/fr/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/about/photos.php",
+            "destination": "/fr/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/about/restaurants.php",
+            "destination": "/fr/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/fr/about/towns.php",
+            "destination": "/fr/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/es/index.php",
+            "destination": "/es/",
+            "permanent": true
+        },
+        {
+            "source": "/es/about/availability.php",
+            "destination": "/es/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/es/about/facilities.php",
+            "destination": "/es/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/es/about/markets.php",
+            "destination": "/es/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/es/about/photos.php",
+            "destination": "/es/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/es/about/restaurants.php",
+            "destination": "/es/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/es/about/towns.php",
+            "destination": "/es/about/towns/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/index.php",
+            "destination": "/cat/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/about/availability.php",
+            "destination": "/cat/about/availability/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/about/facilities.php",
+            "destination": "/cat/about/facilities/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/about/markets.php",
+            "destination": "/cat/about/markets/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/about/photos.php",
+            "destination": "/cat/about/photos/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/about/restaurants.php",
+            "destination": "/cat/about/restaurants/",
+            "permanent": true
+        },
+        {
+            "source": "/cat/about/towns.php",
+            "destination": "/cat/about/towns/",
+            "permanent": true
+        }
+    ]
+}
