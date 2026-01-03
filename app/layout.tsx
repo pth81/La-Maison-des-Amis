@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import "../public/css/style.css";
-import "../public/css/scrolling-nav.css";
 
 export const metadata: Metadata = {
     title: "La Maison des Amis - Family holiday villa with pool & wifi, Tarn, France",
@@ -28,6 +26,9 @@ export default function RootLayout({
                     href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
                     rel="stylesheet"
                 />
+                {/* Custom CSS */}
+                <link href="/css/style.css" rel="stylesheet" />
+                <link href="/css/scrolling-nav.css" rel="stylesheet" />
 
                 {/* Favicons */}
                 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144-precomposed.png" />
