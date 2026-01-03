@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import Carousel from "@/components/Carousel";
 import Contact from "@/components/Contact";
 import WeatherWidget from "@/components/WeatherWidget";
+import { Home, ArrowRight } from "lucide-react";
 
 // Generate static params for all languages
 export function generateStaticParams() {
@@ -106,90 +107,110 @@ export default async function LangHomePage({ params }: PageProps) {
             <Navbar lang={lang} />
             <Carousel lang={lang} />
 
-            <div className="container marketing">
-                <div className="row">
-                    <div className="col-md-4 text-center">
-                        <Link href={`${basePath}/rates/`}>
-                            <img alt="Albi" className="img-circle" src="/images/albi-med.jpg" />
-                        </Link>
-                        <h2>{getText("rates")}</h2>
-                        <p>{getText("ratesDesc1")}</p>
-                        <p>{getText("ratesDesc2")}</p>
-                        <p>
-                            <Link className="btn" href={`${basePath}/rates/`}>
-                                {getText("more")} &raquo;
-                            </Link>
-                        </p>
-                    </div>
+            {/* Main Content Sections */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                {/* Three Column Feature Cards */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-24">
+                    {/* Rates Card */}
+                    <Link href={`${basePath}/rates/`} className="block group text-center bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-cream-200">
+                        <div className="mb-6 flex justify-center">
+                            <div className="relative">
+                                <img 
+                                    alt="Albi" 
+                                    src="/images/albi-med.jpg" 
+                                    className="w-36 h-36 rounded-full object-cover shadow-lg ring-4 ring-cream-200 group-hover:ring-primary-300 transition-all"
+                                />
+                            </div>
+                        </div>
+                        <h2 className="font-heading text-3xl font-semibold text-primary-800 mb-4">{getText("rates")}</h2>
+                        <p className="text-gray-600 mb-2 leading-relaxed">{getText("ratesDesc1")}</p>
+                        <p className="text-gray-600 mb-6 leading-relaxed">{getText("ratesDesc2")}</p>
+                        <span className="inline-flex items-center text-primary-600 group-hover:text-primary-700 font-medium gap-2 transition-all">
+                            {getText("more")} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                    </Link>
 
-                    <div className="col-md-4 text-center">
-                        <Link href={`${basePath}/guest-book/`}>
-                            <img alt="Dine al fresco" className="img-circle" src="/images/bella.jpg" />
-                        </Link>
-                        <h2>{getText("guestBook")}</h2>
-                        <p>{getText("guestQuote")}</p>
-                        <p>{getText("thanks")}</p>
-                        <p>
-                            <strong>Nick and Jo and family, England.</strong>
-                        </p>
-                        <p>
-                            <Link className="btn" href={`${basePath}/guest-book/`}>
-                                {getText("more")} &raquo;
-                            </Link>
-                        </p>
-                        <div className="facebook">
+                    {/* Guest Book Card */}
+                    <Link href={`${basePath}/guest-book/`} className="block group text-center bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-cream-200">
+                        <div className="mb-6 flex justify-center">
+                            <div className="relative">
+                                <img 
+                                    alt="Dine al fresco" 
+                                    src="/images/bella.jpg" 
+                                    className="w-36 h-36 rounded-full object-cover shadow-lg ring-4 ring-cream-200 group-hover:ring-primary-300 transition-all"
+                                />
+                            </div>
+                        </div>
+                        <h2 className="font-heading text-3xl font-semibold text-primary-800 mb-4">{getText("guestBook")}</h2>
+                        <p className="text-gray-600 mb-3 italic leading-relaxed">"{getText("guestQuote")}"</p>
+                        <p className="text-gray-600 mb-2">{getText("thanks")}</p>
+                        <p className="text-primary-700 font-medium mb-6">— Nick and Jo and family, England</p>
+                        <span className="inline-flex items-center text-primary-600 group-hover:text-primary-700 font-medium gap-2 transition-all">
+                            {getText("more")} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                    </Link>
+
+                    {/* About Card */}
+                    <Link href={`${basePath}/about/`} className="block group text-center bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-cream-200">
+                        <div className="mb-6 flex justify-center">
+                            <div className="relative">
+                                <img 
+                                    alt="Les Martels" 
+                                    src="/images/les-martels.jpg" 
+                                    className="w-36 h-36 rounded-full object-cover shadow-lg ring-4 ring-cream-200 group-hover:ring-primary-300 transition-all"
+                                />
+                            </div>
+                        </div>
+                        <h2 className="font-heading text-3xl font-semibold text-primary-800 mb-4">{getText("about")}</h2>
+                        <p className="text-gray-600 mb-6 leading-relaxed">{getText("aboutDesc")}</p>
+                        <span className="inline-flex items-center text-primary-600 group-hover:text-primary-700 font-medium gap-2 transition-all">
+                            {getText("more")} <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                    </Link>
+                </div>
+
+                {/* Location Section */}
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden mb-24 border border-cream-200">
+                    <div className="grid grid-cols-1 lg:grid-cols-2">
+                        <div className="p-10 lg:p-14 flex flex-col justify-center">
+                            <h2 className="font-heading text-4xl sm:text-5xl text-primary-800 mb-2">
+                                {getText("location")}
+                            </h2>
+                            <p className="font-heading text-2xl text-primary-500 italic mb-6">{getText("closeToPerfect")}</p>
+                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">{getText("locationDesc")}</p>
+                            <div className="flex items-center space-x-3 text-gray-700 bg-cream-100 rounded-lg px-4 py-3 w-fit">
+                                <Home className="h-5 w-5 text-primary-600" />
+                                <span className="font-medium">Les Martels, Giroussens, 81500, France</span>
+                            </div>
+                        </div>
+                        <div className="h-80 lg:h-auto">
                             <iframe
-                                src="https://www.facebook.com/plugins/like.php?href=http://www.facebook.com/maisondesamis&amp;layout=button_count&amp;show_faces=false&amp;width=100&amp;action=like&amp;colorscheme=light&amp;height=80"
-                                title="Facebook Like"
+                                className="w-full h-full min-h-80"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92456.85668563456!2d1.7!3d43.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae8d6c39e5c7e7%3A0x406f69c2f3d9450!2s81500%20Giroussens%2C%20France!5e0!3m2!1sen!2sus!4v1704000000000!5m2!1sen!2sus"
+                                title="Location Map"
+                                allowFullScreen
+                                loading="lazy"
+                                name="location-map"
                             />
                         </div>
                     </div>
+                </div>
 
-                    <div className="col-md-4 text-center">
-                        <Link href={`${basePath}/about/`}>
-                            <img alt="Les Martels" className="img-circle" src="/images/les-martels.jpg" />
-                        </Link>
-                        <h2>{getText("about")}</h2>
-                        <p>{getText("aboutDesc")}</p>
-                        <p>
-                            <Link className="btn" href={`${basePath}/about/`}>
-                                {getText("more")} &raquo;
-                            </Link>
-                        </p>
+                {/* Contact Section */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <div className="order-2 lg:order-1">
+                        <img
+                            alt="Contact us"
+                            src="/images/paul-and-nadia.jpg"
+                            className="w-full rounded-2xl shadow-xl"
+                        />
                     </div>
-                </div>
-
-                <hr className="featurette-divider" />
-
-                <div className="featurette">
-                    <iframe
-                        className="featurette-image pull-right map"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92456.85668563456!2d1.7!3d43.76!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ae8d6c39e5c7e7%3A0x406f69c2f3d9450!2s81500%20Giroussens%2C%20France!5e0!3m2!1sen!2sus!4v1704000000000!5m2!1sen!2sus"
-                        title="Location Map"
-                    />
-                    <h2 className="featurette-heading">
-                        {getText("location")} <span className="muted">{getText("closeToPerfect")}</span>
-                    </h2>
-                    <p className="lead">{getText("locationDesc")}</p>
-                    <p className="lead">
-                        <i className="fa fa-home"></i> Les Martels, Giroussens, 81500, France
-                    </p>
-                </div>
-
-                <hr className="featurette-divider" />
-
-
-                <div className="featurette">
-                    <img
-                        alt="Contact us"
-                        className="featurette-image pull-left shadow"
-                        src="/images/paul-and-nadia.jpg"
-                    />
-                    <Contact lang={lang} />
-                    <hr className="featurette-divider" />
-                    <p className="lead">
-                        <WeatherWidget />
-                    </p>
+                    <div className="order-1 lg:order-2 bg-white rounded-2xl p-10 shadow-lg border border-cream-200">
+                        <Contact lang={lang} />
+                        <div className="mt-10 pt-8 border-t border-cream-200">
+                            <WeatherWidget />
+                        </div>
+                    </div>
                 </div>
             </div>
 

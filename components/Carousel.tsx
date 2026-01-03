@@ -1,6 +1,9 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import Link from "next/link";
+import clsx from "clsx";
 
 interface CarouselProps {
     lang: string;
@@ -19,6 +22,9 @@ interface Slide {
 
 export default function Carousel({ lang }: CarouselProps) {
     const [activeIndex, setActiveIndex] = useState(0);
+    const [touchStart, setTouchStart] = useState(0);
+    const [touchEnd, setTouchEnd] = useState(0);
+    const carouselRef = useRef<HTMLDivElement>(null);
 
     // Translations
     const t = {
@@ -64,47 +70,134 @@ export default function Carousel({ lang }: CarouselProps) {
         return () => clearInterval(interval);
     }, [slides.length]);
 
-    const nextSlide = (e: React.MouseEvent) => {
-        e.preventDefault();
+    const nextSlide = () => {
         setActiveIndex((current) => (current + 1) % slides.length);
     };
 
-    const prevSlide = (e: React.MouseEvent) => {
-        e.preventDefault();
+    const prevSlide = () => {
         setActiveIndex((current) => (current - 1 + slides.length) % slides.length);
     };
 
+    const minSwipeDistance = 50;
+
+    const onTouchStart = (e: React.TouchEvent) => {
+        setTouchEnd(0);
+        setTouchStart(e.targetTouches[0].clientX);
+    };
+
+    const onTouchMove = (e: React.TouchEvent) => {
+        setTouchEnd(e.targetTouches[0].clientX);
+    };
+
+    const onTouchEnd = () => {
+        if (!touchStart || !touchEnd) return;
+        const distance = touchStart - touchEnd;
+        const isLeftSwipe = distance > minSwipeDistance;
+        const isRightSwipe = distance < -minSwipeDistance;
+
+        if (isLeftSwipe) {
+            nextSlide();
+        }
+        if (isRightSwipe) {
+            prevSlide();
+        }
+    };
+
     return (
-        <div className="carousel slide" id="myCarousel">
-            <div className="carousel-inner">
-                {slides.map((slide, index) => (
-                    <div key={index} className={`item${index === activeIndex ? " active" : ""}`}>
-                        <img
-                            alt={slide.alt}
-                            src={slide.image}
-                            className={slide.isPortrait ? "portrait" : ""}
-                            style={{ height: "66.66vw", objectFit: "cover" }}
-                        />
-                        <div className="container" style={{ height: "66.66vw" }}>
-                            <div className={slide.centerCaption ? "carousel-center-caption" : "carousel-caption" + (slide.isDarker ? " darker" : "")}>
-                                <h1>{slide.title}</h1>
-                                {slide.lead && <h1 className="site-desc">{slide.lead}</h1>}
-                                {slide.link && (
-                                    <a className="btn btn-large btn-primary" href={slide.link.href}>
-                                        {slide.link.text}
-                                    </a>
+        <div 
+            ref={carouselRef}
+            className="relative w-full h-[70vh] sm:h-[80vh] overflow-hidden"
+            onTouchStart={onTouchStart}
+            onTouchMove={onTouchMove}
+            onTouchEnd={onTouchEnd}
+        >
+            {slides.map((slide, index) => (
+                <div
+                    key={index}
+                    className={clsx(
+                        "absolute inset-0 transition-opacity duration-1000 ease-in-out",
+                        index === activeIndex ? "opacity-100 z-10" : "opacity-0 z-0"
+                    )}
+                >
+                    <img
+                        alt={slide.alt}
+                        src={slide.image}
+                        className={clsx(
+                            "w-full h-full object-cover",
+                            slide.isPortrait && "object-contain"
+                        )}
+                    />
+                    {/* Atmospheric gradient overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                    <div className="absolute inset-0 flex items-end pb-20 sm:pb-28">
+                        <div className={clsx(
+                            "max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 w-full",
+                            slide.centerCaption ? "text-center" : "text-left"
+                        )}>
+                            <h1 className={clsx(
+                                "font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold mb-4 tracking-wide",
+                                slide.isDarker ? "text-cream-200" : "text-white"
+                            )}
+                            style={{ textShadow: '2px 4px 12px rgba(0,0,0,0.5)' }}
+                            >
+                                {slide.title}
+                            </h1>
+                            {slide.lead && (
+                                <p className={clsx(
+                                    "text-lg sm:text-xl md:text-2xl mb-8 max-w-3xl font-light leading-relaxed",
+                                    slide.isDarker ? "text-cream-300" : "text-cream-100",
+                                    slide.centerCaption && "mx-auto"
                                 )}
-                            </div>
+                                style={{ textShadow: '1px 2px 8px rgba(0,0,0,0.5)' }}
+                                >
+                                    {slide.lead}
+                                </p>
+                            )}
+                            {slide.link && (
+                                <div className={slide.centerCaption ? "flex justify-center" : ""}>
+                                    <Link
+                                        href={slide.link.href}
+                                        className="inline-flex items-center bg-primary-600 text-white px-8 py-4 rounded-md text-lg font-medium hover:bg-primary-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
+                                    >
+                                        {slide.link.text}
+                                    </Link>
+                                </div>
+                            )}
                         </div>
                     </div>
+                </div>
+            ))}
+
+            {/* Navigation Arrows - more elegant */}
+            <button
+                onClick={prevSlide}
+                className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white p-3 rounded-full transition-all hover:scale-110"
+                aria-label="Previous slide"
+            >
+                <ChevronLeft className="h-6 w-6" />
+            </button>
+            <button
+                onClick={nextSlide}
+                className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 bg-white/20 backdrop-blur-sm hover:bg-white/40 text-white p-3 rounded-full transition-all hover:scale-110"
+                aria-label="Next slide"
+            >
+                <ChevronRight className="h-6 w-6" />
+            </button>
+
+            {/* Indicators - elegant line style */}
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex space-x-3">
+                {slides.map((_, index) => (
+                    <button
+                        key={index}
+                        onClick={() => setActiveIndex(index)}
+                        className={clsx(
+                            "h-1 rounded-full transition-all duration-300",
+                            index === activeIndex ? "w-12 bg-primary-400" : "w-3 bg-white/40 hover:bg-white/60"
+                        )}
+                        aria-label={`Go to slide ${index + 1}`}
+                    />
                 ))}
             </div>
-            <a className="left carousel-control" href="#myCarousel" onClick={prevSlide}>
-                &lsaquo;
-            </a>
-            <a className="right carousel-control" href="#myCarousel" onClick={nextSlide}>
-                &rsaquo;
-            </a>
         </div>
     );
 }

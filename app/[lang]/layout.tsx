@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 // Define supported languages
 export function generateStaticParams() {
     return [
+        { lang: "en" },
         { lang: "fr" },
         { lang: "es" },
         { lang: "cat" },

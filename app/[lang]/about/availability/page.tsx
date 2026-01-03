@@ -27,14 +27,17 @@ export default async function AvailabilityPage({ params }: PageProps) {
     return (
         <>
             <Navbar lang={lang} />
-            <div className="container about">
-                <h1>{getText("title")}</h1>
-                <p className="lead">{getText("lead")}</p>
-                <div className="calendar">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div className="text-center mb-16">
+                    <h1 className="font-heading text-4xl sm:text-5xl text-primary-800 mb-4">{getText("title")}</h1>
+                    <p className="text-xl text-gray-600 max-w-2xl mx-auto">{getText("lead")}</p>
+                </div>
+                <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-cream-200">
                     <iframe
                         src="https://calendar.google.com/calendar/embed?src=lamaisondesamis%40gmail.com&ctz=Europe/Paris"
-                        style={{ border: 0, width: "100%", height: "600px" }}
+                        className="w-full h-[600px] border-0"
                         title="Availability Calendar"
+                        name="availability-calendar"
                     />
                 </div>
             </div>
