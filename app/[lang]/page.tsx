@@ -33,10 +33,10 @@ export default async function LangHomePage({ params }: PageProps) {
             cat: "Tarifes",
         },
         ratesDesc1: {
-            en: "Our large four-bedroom house comfortably accommodates 10 people, with prices starting at €350 for a weekend in winter, up to €1750 for a week in August.",
-            fr: "Notre grande maison de quatre chambres accueille confortablement 10 personnes, avec des prix à partir de 350€ pour un week-end en hiver, jusqu'à 1750€ pour une semaine en août.",
-            es: "Nuestra gran casa de cuatro dormitorios aloja cómodamente a 10 personas, con precios desde €350 para un fin de semana en invierno, hasta €1750 para una semana en agosto.",
-            cat: "La nostra gran casa de quatre habitacions allotja còmodament 10 persones, amb preus des de 350€ per a un cap de setmana a l'hivern, fins a 1750€ per a una setmana a l'agost.",
+            en: "Our large four-bedroom house comfortably accommodates 10 people, with prices starting at €500 for a weekend in winter, up to €2000 for a week in August.",
+            fr: "Notre grande maison de quatre chambres accueille confortablement 10 personnes, avec des prix à partir de 500€ pour un week-end en hiver, jusqu'à 2000€ pour une semaine en août.",
+            es: "Nuestra gran casa de cuatro dormitorios aloja cómodamente a 10 personas, con precios desde €500 para un fin de semana en invierno, hasta €2000 para una semana en agosto.",
+            cat: "La nostra gran casa de quatre habitacions allotja còmodament 10 persones, amb preus des de 500€ per a un cap de setmana a l'hivern, fins a 2000€ per a una setmana a l'agost.",
         },
         ratesDesc2: {
             en: "Outside of peak season we can be flexible, taking into account the number of people and length of stay.",
