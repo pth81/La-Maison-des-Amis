@@ -68,11 +68,11 @@ export default async function RatesPage({ params }: PageProps) {
                                 <tbody>
                                     <tr className="border-b border-cream-100">
                                         <td className="py-5 text-lg font-medium text-gray-800">{getText("july")}</td>
-                                        <td className="py-5 text-right text-2xl font-semibold text-primary-700">€1,500</td>
+                                        <td className="py-5 text-right text-2xl font-semibold text-primary-700">€2,000</td>
                                     </tr>
                                     <tr>
                                         <td className="py-5 text-lg font-medium text-gray-800">{getText("august")}</td>
-                                        <td className="py-5 text-right text-2xl font-semibold text-primary-700">€1,750</td>
+                                        <td className="py-5 text-right text-2xl font-semibold text-primary-700">€2,000</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -95,11 +95,11 @@ export default async function RatesPage({ params }: PageProps) {
                                 <tbody>
                                     <tr className="border-b border-cream-100">
                                         <td className="py-5 text-lg font-medium text-gray-800">{getText("weekend")}</td>
-                                        <td className="py-5 text-right"><span className="text-sm text-gray-500">{getText("from")}</span> <span className="text-2xl font-semibold text-sage-700">€350</span></td>
+                                        <td className="py-5 text-right"><span className="text-sm text-gray-500">{getText("from")}</span> <span className="text-2xl font-semibold text-sage-700">€500</span></td>
                                     </tr>
                                     <tr>
                                         <td className="py-5 text-lg font-medium text-gray-800">{getText("week")}</td>
-                                        <td className="py-5 text-right"><span className="text-sm text-gray-500">{getText("from")}</span> <span className="text-2xl font-semibold text-sage-700">€700</span></td>
+                                        <td className="py-5 text-right"><span className="text-sm text-gray-500">{getText("from")}</span> <span className="text-2xl font-semibold text-sage-700">€950</span></td>
                                     </tr>
                                 </tbody>
                             </table>
